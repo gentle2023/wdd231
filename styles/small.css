@@ -67,6 +67,7 @@ body {
   padding: var(--spacing-sm) var(--spacing-lg);
   background-color: var(--primary);
   border-bottom: 1px solid var(--white);
+  color: var(--white);
 }
 
 .logo-group {

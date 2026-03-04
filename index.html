@@ -43,47 +43,52 @@
   </ul>
 </nav>
 
-<main>
+<main class="container">
     <h1>Home</h1>
 
-    <div class="container">
+    <!-- About + Photo Wrapper -->
+    <div class="top-grid">
+        <!-- About Me -->
+        <section class="card">
+            <div class="card-header">About Me</div>
+            <div class="card-body">
+                <p>
+                    Hi, I’m Ijeoma Jacinta Ani, a passionate and driven student with a strong interest in technology,
+                    engineering, and digital innovation. I am committed to continuous learning and personal growth,
+                    constantly exploring new tools and skills that help me build practical solutions to real-world
+                    problems.
+                </p>
+            </div>
+        </section>
 
-  <section class="card">
-    <div class="card-header">About Me</div>
-    <div class="card-body">
-      <p>Hi, I’m Ijeoma Jecinta Ani, a passionate and driven student with a strong interest in technology, 
-        engineering, and digital innovation. I am committed to continuous learning and personal growth, constantly 
-        exploring new tools and skills that help me build practical solutions to real-world problems. With a growing 
-        background in programming and technical development, I enjoy turning ideas into functional projects and 
-        improving my expertise through hands-on experience. My goal is to develop impactful solutions, contribute 
-        meaningfully to the tech community, and build a career centered on innovation and excellence.</p>
+        <!-- Student Photo -->
+        <section class="card">
+            <div class="card-header">Student Photo</div>
+            <div class="card-body photo-body">
+                <img src="images/profile.png" alt="Ijeoma Ani Photo">
+            </div>
+        </section>
+
     </div>
-  </section>
 
-  <section class="card">
-    <div class="card-header">Student Photo</div>
-    <div class="card-body photo-body">
-      <img src="images/profile.png" alt="Ijeoma Ani Photo">
-    </div>
-  </section>
+    <!-- Courses Section -->
+    <section class="card courses">
+        <div class="card-header">Web Certificate Courses</div>
 
-</div>
+        <div class="card-body">
+            <div class="buttons">
+                <button type="button" id="allBtn">All</button>
+                <button type="button" id="wddBtn">WDD</button>
+                <button type="button" id="cseBtn">CSE</button>
+            </div>
 
-    <section class="courses">
-        <h2>Web Certificate Courses</h2>
+            <div id="course-container"></div>
 
-        <div class="buttons">
-            <button id="allBtn">All</button>
-            <button id="wddBtn">WDD</button>
-            <button id="cseBtn">CSE</button>
+            <p id="totalCredits"></p>
         </div>
-
-        <div id="course-container"></div>
-
-        <p id="totalCredits"></p>
     </section>
-</main>
 
+</main>
 <footer> 
     <div class="social">
         <a href="https://github.com/YOURUSERNAME" target="_blank" rel="noopener">

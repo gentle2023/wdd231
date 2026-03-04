@@ -11,6 +11,7 @@
   --border-light: #3a3a3a;
   --white: #ffffff;
   --gray-light: #eeeeee;
+  --active: #d4b422;
 
   --completed: #1b3e52;
 
@@ -143,8 +144,9 @@ body {
 
 /* Wayfinding */
 .navigation ul li.current a {
-  background-color: var(--primary-dark);
+  background-color: var(--active);
   font-weight: 600;
+  color: var(--primary-dark);
 }
 
 

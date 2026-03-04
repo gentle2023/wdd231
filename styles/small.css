@@ -131,7 +131,7 @@ body {
   font-size: var(--font-size-base);
   color: var(--white);
   text-decoration: none;
-  border-top: 1px solid var(--border-light);
+  border-top: 1px solid var(--white);
   min-height: var(--min-touch);
   transition: background var(--transition-fast);
 }

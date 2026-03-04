@@ -2,7 +2,7 @@
    EXTRA SMALL DEVICES (< 400px)
 ========================= */
 
-@media only screen and (max-width: 25rem) { 
+@media only screen and (max-width: 28rem) { 
 
   /* Header */
   .site-header {
@@ -36,14 +36,12 @@
     font-size: 0.9rem;
   }
 
-  /* Force single column layout */
-  .container {
+   .container {
     grid-template-columns: 1fr;
     gap: 0.8rem;
   }
 
-  /* Buttons stack vertically */
-  .buttons {
+   .buttons {
     flex-direction: column;
   }
 
@@ -52,8 +50,7 @@
     padding: 0.7rem;
   }
 
-  /* Course cards - single column */
-  #course-container {
+    #course-container {
     grid-template-columns: 1fr;
   }
 
@@ -62,12 +59,9 @@
     padding: 1rem;
   }
 
-  /* Image resize */
-  .photo-body img {
+   .photo-body img {
     width: 200px;
   }
-
-  /* Footer */
   footer {
     font-size: 0.85rem;
     padding: 0.8rem;

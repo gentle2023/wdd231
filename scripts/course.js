@@ -130,21 +130,38 @@ document.addEventListener("DOMContentLoaded", () => {
             `The total credits for courses listed above is ${credits}`;
     }
 
-    // ==========================
-    // FILTER BUTTONS
-    // ==========================
-    document.getElementById("allBtn").addEventListener("click", () => {
-        displayCourses(courses);
-    });
+ // ==========================
+// FILTER BUTTONS
+// ==========================
 
-    document.getElementById("wddBtn").addEventListener("click", () => {
-        displayCourses(courses.filter(course => course.subject === "WDD"));
-    });
+const allBtn = document.getElementById("allBtn");
+const wddBtn = document.getElementById("wddBtn");
+const cseBtn = document.getElementById("cseBtn");
 
-    document.getElementById("cseBtn").addEventListener("click", () => {
-        displayCourses(courses.filter(course => course.subject === "CSE"));
-    });
+const buttons = [allBtn, wddBtn, cseBtn];
 
-    // Initial Load
+// Function to set active button
+function setActiveButton(activeBtn) {
+    buttons.forEach(btn => btn.classList.remove("active"));
+    activeBtn.classList.add("active");
+}
+
+allBtn.addEventListener("click", () => {
     displayCourses(courses);
+    setActiveButton(allBtn);
+});
+
+wddBtn.addEventListener("click", () => {
+    displayCourses(courses.filter(course => course.subject === "WDD"));
+    setActiveButton(wddBtn);
+});
+
+cseBtn.addEventListener("click", () => {
+    displayCourses(courses.filter(course => course.subject === "CSE"));
+    setActiveButton(cseBtn);
+});
+
+// Initial Load
+displayCourses(courses);
+setActiveButton(allBtn); 
 });

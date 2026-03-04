@@ -138,6 +138,7 @@ body {
 
 .navigation ul li a:hover {
   background-color: var(--border-dark);
+  color: var(--white);
 }
 
 /* Wayfinding */

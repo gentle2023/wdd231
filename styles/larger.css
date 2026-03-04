@@ -161,6 +161,10 @@
     gap: 2rem;
   }
 
+   .container h1 {
+    grid-column: 1 / -1;
+  }
+  
   #course-container {
     grid-template-columns: repeat(3, 1fr);
   }

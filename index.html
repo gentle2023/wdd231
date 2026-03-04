@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Web Development">
+  <title>Ani Ijeoma Jacinta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="logo-group">
+    <img src="images/logo.svg" alt="Ani Ijeoma Logo" width="40" height="40">
+    <span class="site-name">Ani Ijeoma</span>
+  </div>
+
+  <button 
+    type="button" 
+    id="nav-button" 
+    class="hamburger" 
+    aria-label="Toggle navigation menu">
+  </button>
+</header>
+
+<nav id="nav-bar" class="navigation">
+  <ul>
+    <li class="current"><a href="#">Home</a></li>
+     <li><a href="#">Chamber of Commerce</a></li>
+    <li><a href="#">Final Project</a></li>
+    
+  </ul>
+</nav>
+
+<main>
+    <h1>Home</h1>
+
+    <div class="container">
+
+  <section class="card">
+    <div class="card-header">About Me</div>
+    <div class="card-body">
+      <p>Hi, I’m Ijeoma Jecinta Ani, a passionate and driven student with a strong interest in technology, 
+        engineering, and digital innovation. I am committed to continuous learning and personal growth, constantly 
+        exploring new tools and skills that help me build practical solutions to real-world problems. With a growing 
+        background in programming and technical development, I enjoy turning ideas into functional projects and 
+        improving my expertise through hands-on experience. My goal is to develop impactful solutions, contribute 
+        meaningfully to the tech community, and build a career centered on innovation and excellence.</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="card-header">Student Photo</div>
+    <div class="card-body photo-body">
+      <img src="images/profile.jpg" alt="Student Photo">
+    </div>
+  </section>
+
+</div>
+
+    <section class="courses">
+        <h2>Web Certificate Courses</h2>
+
+        <div class="buttons">
+            <button id="allBtn">All</button>
+            <button id="wddBtn">WDD</button>
+            <button id="cseBtn">CSE</button>
+        </div>
+
+        <div id="course-container"></div>
+
+        <p id="totalCredits"></p>
+    </section>
+</main>
+
+<footer> 
+    <div class="social">
+        <a href="https://github.com/YOURUSERNAME" target="_blank" rel="noopener">
+            GitHub
+        </a>
+        <a href="https://linkedin.com/in/YOURPROFILE" target="_blank" rel="noopener">
+            LinkedIn
+        </a>
+    </div>
+    <p>
+        © <span id="currentyear"></span> Ani Ijeoma Jacinta • Nigeria
+    </p>
+    <p id="lastModified"></p>
+</footer>
+
+</body>
+</html>

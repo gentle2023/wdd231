@@ -1,0 +1,28 @@
+{
+  "familyName": "Okafor",
+  "moveInDate": "2024-08-15",
+  "numberOfPeople": 4,
+  "visitedByBishopric": true,
+  "familyMembers": [
+    {
+      "name": "Chinedu Okafor",
+      "gender": "Male",
+      "birthdate": "1985-04-12"
+    },
+    {
+      "name": "Ngozi Okafor",
+      "gender": "Female",
+      "birthdate": "1988-09-03"
+    },
+    {
+      "name": "Emeka Okafor",
+      "gender": "Male",
+      "birthdate": "2012-06-18"
+    },
+    {
+      "name": "Ada Okafor",
+      "gender": "Female",
+      "birthdate": "2016-11-25"
+    }
+  ]
+}

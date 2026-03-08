@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  text-align: center;
+}
+
+header {
+  background: #002f5b;
+  color: white;
+  padding: 1rem;
+}
+
+main {
+  padding: 1rem;
+}
+
+#cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem;
+}
+
+section {
+  background: #f4f4f4;
+  border: 1px solid #ccc;
+  padding: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #002f5b;
+  color: white;
+}

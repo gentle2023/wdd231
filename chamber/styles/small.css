@@ -97,10 +97,8 @@ header {
 }
 
 .navigation a.active {
-  background-color: var(--secondary-color);
-  color: var(--text-color);
-  padding: 0.5rem 2rem;
-  border-radius: 4px;
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
   }
 
 /* MAIN */

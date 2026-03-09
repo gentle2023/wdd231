@@ -1,0 +1,181 @@
+:root {
+
+  /* Color Variables */
+  --primary-color: #042729;     
+  --secondary-color: #F4B400;    
+  --background-color: #F5F5F5;  
+  --text-color: #222222;
+  --white: #ffffff;
+  --footer-bg: #111111;
+  --heading-color: #3a3838;
+
+  /* Font Variables */
+  --heading-font: "Poppins", sans-serif;
+  --body-font: Arial, Helvetica, sans-serif;
+  --nav-font: "Play", sans-serif;
+
+  /* Spacing */
+  --padding-small: 0.5rem;
+  --padding-medium: 1rem;
+  --padding-large: 2rem;
+
+  /* Border Radius */
+  --radius: 8px;
+
+}
+
+body {
+  font-family: var(--body-font);
+  background: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding-medium);
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 90px;
+}
+
+.logo h1 {
+  font-family: var(--nav-font);
+}
+
+/* NAVIGATION */
+
+#menu {
+  font-size: 1.8rem;
+  border: none;
+  background: none;
+  color: var(--white);
+}
+
+.navigation {
+  display: none;
+  list-style: none;
+  padding: 0;
+}
+
+.navigation.open {
+  display: block;
+}
+
+.navigation li {
+  margin: var(--padding-small) 0;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: bold;
+  font-size: 17px;
+  font-family: var(--nav-font);
+}
+
+/* MAIN */
+
+main {
+  padding: var(--padding-medium);
+}
+
+h2 {
+  font-family: var(--heading-font);
+  text-align: center;
+  color: var(--heading-color);
+  font-size: 25px;
+}
+
+/* DIRECTORY GRID */
+
+#members.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 30px;
+}
+
+/* MEMBER CARD */
+
+.card {
+  background: var(--white);
+  padding: var(--padding-medium);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.card img {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+/* VIEW BUTTONS */
+
+.view-buttons button {
+  padding: 0.8rem 1rem;
+  border: none;
+  background: var(--primary-color);
+  color: var(--white);
+  border-radius: var(--radius);
+  cursor: pointer;
+  align-items: center;
+}
+
+/* FOOTER */
+
+.footer {
+  background: var(--footer-bg);
+  padding: var(--padding-medium);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: var(--white);
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+
+.footer-left,
+.footer-right {
+  line-height: 1.6;
+}
+
+.footer-center {
+  display: flex;
+  gap: 15px;
+}
+
+.social {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social img {
+  width: 40px;
+  height: 40px;
+}
+
+
+

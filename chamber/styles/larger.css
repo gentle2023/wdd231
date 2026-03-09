@@ -1,0 +1,26 @@
+@media screen and (min-width:768px){
+
+.navigation{
+display:flex;
+gap:20px;
+}
+
+#menu{
+display:none;
+}
+
+#members.grid{
+grid-template-columns:repeat(3,1fr);
+}
+
+.list .card{
+display:flex;
+gap:20px;
+align-items:center;
+}
+
+.card img{
+width:120px;
+}
+
+}

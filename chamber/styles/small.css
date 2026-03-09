@@ -109,6 +109,13 @@ h2 {
   margin-top: 30px;
 }
 
+#members.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+
 /* MEMBER CARD */
 
 .card {
@@ -116,6 +123,7 @@ h2 {
   padding: var(--padding-medium);
   border-radius: var(--radius);
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  text-align: center;
 }
 
 .card img {
@@ -123,7 +131,15 @@ h2 {
   border-radius: var(--radius);
 }
 
+
 /* VIEW BUTTONS */
+
+.view-buttons {
+  display: flex;
+  justify-content: center; 
+  gap: 1rem; 
+  margin: 1rem 0;
+}
 
 .view-buttons button {
   padding: 0.8rem 1rem;
@@ -132,7 +148,6 @@ h2 {
   color: var(--white);
   border-radius: var(--radius);
   cursor: pointer;
-  align-items: center;
 }
 
 /* FOOTER */

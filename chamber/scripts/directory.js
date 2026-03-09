@@ -55,10 +55,12 @@ cards.classList.remove("grid");
 });
 
 
-// Hamburger Menu JS
-const ham = document.querySelector("#menu");
+// JavaScript for Hamburger
+const hamburger = document.querySelector("#hamburger");
 const nav = document.querySelector(".navigation");
 
-ham.addEventListener("click", ()=>{
-nav.classList.toggle("open");
+hamburger.addEventListener("click", () => {
+  nav.classList.toggle("open");
+  hamburger.textContent = nav.classList.contains("open") ? "✖" : "☰";
 });
+

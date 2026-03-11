@@ -33,10 +33,25 @@ let image = document.createElement("img");
 image.src = member.image;
 image.alt = member.name;
 
+
+let membership = document.createElement("p");
+
+let level = "";
+if (member.membershipLevel === 1) {
+  level = "Member";
+} else if (member.membershipLevel === 2) {
+  level = "Silver Member";
+} else if (member.membershipLevel === 3) {
+  level = "Gold Member";
+}
+
+membership.textContent = `Membership Level: ${level}`;
+
 card.appendChild(image);
 card.appendChild(name);
 card.appendChild(address);
 card.appendChild(phone);
+card.appendChild(membership);
 card.appendChild(link);
 
 cards.appendChild(card);

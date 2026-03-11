@@ -5,7 +5,7 @@
 "phone":"+234 8012345678",
 "website":"https://example.com",
 "image":"images/akwanga.svg",
-"membership":3
+"membershipLevel":3
 },
 
 {
@@ -14,7 +14,7 @@
 "phone":"+234 8098765432",
 "website":"https://example.com",
 "image":"images/nashub.svg",
-"membership":2
+"membershipLevel":2
 },
 
 {
@@ -23,7 +23,7 @@
 "phone":"+234 8076543210",
 "website":"https://jinji.com",
 "image":"images/jinji.svg",
-"membership":1
+"membershipLevel":1
 },
 
 {
@@ -32,7 +32,7 @@
 "phone":"+234 8061234567",
 "website":"https://gyunkafarms.com",
 "image":"images/gyunka.svg",
-"membership":2
+"membershipLevel":2
 },
 
 {
@@ -41,7 +41,7 @@
 "phone":"+234 8051112222",
 "website":"https://stlouispharm.com",
 "image":"images/pharm.svg",
-"membership":1
+"membershipLevel":1
 },
 
 {
@@ -50,7 +50,7 @@
 "phone":"+234 8043334444",
 "website":"https://savannabread.com",
 "image":"images/savanna.svg",
-"membership":3
+"membershipLevel":3
 },
 
 {
@@ -59,7 +59,7 @@
 "phone":"+234 8037778888",
 "website":"https://dikeelectronics.com",
 "image":"images/dike.svg",
-"membership":2
+"membershipLevel":2
 },
 
 {
@@ -68,7 +68,7 @@
 "phone":"+234 8025556677",
 "website":"https://lavanastore.com",
 "image":"images/lavana.svg",
-"membership":2
+"membershipLevel":2
 },
 
 {
@@ -77,6 +77,6 @@
 "phone":"+234 8034445566",
 "website":"https://xtremephotography.com",
 "image":"images/photo.svg",
-"membership":3
+"membershipLevel":3
 }
 ]

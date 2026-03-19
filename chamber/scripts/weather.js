@@ -1,125 +1,80 @@
-const apiKey = '3cc618cadc2bb04e2e31ce9bc3a4f421'; 
-const lat = '8.91667'; 
-const lon = '8.38333';
+const currentTemp = document.querySelector('#current-temp');
+const weatherIcon = document.querySelector('#weather-icon');
+const description = document.querySelector('#description');
 
-// metric = Celsius
-const weatherUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+const high = document.querySelector('#high');
+const low = document.querySelector('#low');
+const humidity = document.querySelector('#humidity');
+const sunrise = document.querySelector('#sunrise');
+const sunset = document.querySelector('#sunset');
 
-const membersUrl = 'data/members.json';
+const url = 'https://api.openweathermap.org/data/2.5/forecast?lat=8.91667&lon=8.38333&units=metric&appid=3cc618cadc2bb04e2e31ce9bc3a4f421';
 
+async function apiFetch() {
+  const response = await fetch(url);
+  const data = await response.json();
 
-// --- WEATHER FUNCTIONALITY ---
-async function fetchWeather() {
-    try {
-        const response = await fetch(weatherUrl);
-        const data = await response.json();
-        
-        // Current Weather (first item in list)
-        const current = data.list[0];
-const weatherContainer = document.getElementById('weather-info');
+  console.log(data);
 
-// Convert sunrise & sunset timestamps
-const sunrise = new Date(data.city.sunrise * 1000)
-  .toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+  // main temp
+  currentTemp.innerHTML = `${data.main.temp}&deg;C`;
 
-const sunset = new Date(data.city.sunset * 1000)
-  .toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+  // description
+  description.textContent = data.weather[0].description;
 
-weatherContainer.innerHTML = `
-<div class="weather-layout">
+  // icon
+  const iconSrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+  weatherIcon.src = iconSrc;
+  weatherIcon.alt = data.weather[0].description;
 
-<img src="https://openweathermap.org/img/wn/${current.weather[0].icon}@2x.png" alt="weather icon">
+  // extra data
+  high.textContent = `${data.main.temp_max}°C`;
+  low.textContent = `${data.main.temp_min}°C`;
+  humidity.textContent = `${data.main.humidity}%`;
 
-<div class="weather-details">
-<p class="temp">${Math.round(current.main.temp)}°C</p>
-<p>${current.weather[0].description}</p>
-<p>High: ${Math.round(current.main.temp_max)}°C</p>
-<p>Low: ${Math.round(current.main.temp_min)}°C</p>
-<p>Humidity: ${current.main.humidity}%</p>
-<p>Sunrise: ${sunrise}</p>
-<p>Sunset: ${sunset}</p>
-</div>
-</div>
-`;
+  // convert sunrise/sunset
+  const sunriseTime = new Date(data.sys.sunrise * 1000);
+  const sunsetTime = new Date(data.sys.sunset * 1000);
 
-        // 3-Day Forecast (Extracting mid-day temps for next 3 days)
-        const forecastContainer = document.getElementById('forecast-info');
-
-        // Clear previous forecast
-        forecastContainer.innerHTML = "";
-
-        const forecastDays = data.list
-            .filter(item => item.dt_txt.includes("12:00:00"))
-            .slice(0, 3);
-        
-        forecastDays.forEach(day => {
-            const date = new Date(day.dt * 1000)
-                .toLocaleDateString('en-US', { weekday: 'long' });
-
-            forecastContainer.innerHTML += `
-                <p>${date}: <strong>${Math.round(day.main.temp)}°C</strong></p>
-            `;
-        });
-
-    } catch (error) {
-        console.error("Error fetching weather:", error);
-    }
+  sunrise.textContent = sunriseTime.toLocaleTimeString();
+  sunset.textContent = sunsetTime.toLocaleTimeString();
 }
 
+apiFetch();
 
-// --- SPOTLIGHT FUNCTIONALITY ---
-async function fetchSpotlights() {
-    try {
-        const response = await fetch(membersUrl);
-        const members = await response.json();
+const forecastEl = document.querySelector('#forecast');
 
-        // Filter: Gold (3) and Silver (2) only
-        const eligibleMembers = members.filter(m => m.membershipLevel >= 2);
+const forecastURL = 'https://api.openweathermap.org/data/2.5/forecast?lat=8.91667&lon=8.38333&units=metric&appid=3cc618cadc2bb04e2e31ce9bc3a4f421';
 
-        // Shuffle and pick 3
-        const shuffled = eligibleMembers.sort(() => 0.5 - Math.random());
-        const spotlights = shuffled.slice(0, 3);
+async function getForecast() {
+  try {
+    const response = await fetch(forecastURL);
 
-        const container = document.getElementById('spotlight-container');
-        container.innerHTML = "";
+    if (response.ok) {
+      const data = await response.json();
 
-        spotlights.forEach(m => {
-            const level = m.membershipLevel === 3 ? "Gold" : "Silver";
+        const threeDays = data.list.filter((item, index) => index % 8 === 0).slice(0, 3);
 
-            container.innerHTML += `
-                <div class="spotlight-card">
-                    <h4>${m.name}</h4>
-                    <p class="tagline">${level} Partner</p>
-                    <hr>
+      forecastEl.innerHTML = threeDays.map(day => {
+        const date = new Date(day.dt * 1000);
 
-                    <div class="card-body">
-                        <img src="${m.image}" alt="${m.name} Logo">
+          const dayName = date.toLocaleDateString('en-US', { weekday: 'long' });
 
-                        <div class="contact-info">
-                            <p>info@${m.name.toLowerCase().replace(/\s/g, '')}.com</p>
-                            <p>${m.phone}</p>
-                            <p>
-                                <a href="${m.website}" target="_blank">
-                                    ${m.website.replace('https://', '')}
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            `;
-        });
+        return `${dayName}: <strong>${Math.round(day.main.temp)}°C</strong>`;
+      }).join("<br>");
 
-    } catch (error) {
-        console.error("Error loading spotlights:", error);
+    } else {
+      throw Error(await response.text());
     }
+
+  } catch (error) {
+    console.log(error);
+  }
 }
 
+getForecast();
 
-// --- INITIALIZE ---
-document.addEventListener('DOMContentLoaded', () => {
-    fetchWeather();
-    fetchSpotlights();
-});
+
 
 // JavaScript for Hamburger
 const hamburger = document.querySelector("#hamburger");

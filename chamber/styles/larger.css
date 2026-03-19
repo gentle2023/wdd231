@@ -1,7 +1,110 @@
+/* --- Tablet and Desktop (Greater than 768px) --- */
+@media (min-width: 768px) {
+      #hamburger {
+    display: none;
+    font-size: 2rem;
+    margin-left: auto;
+
+  }
+
+  .navigation {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .navigation li {
+    margin: 0;
+  }
+
+   #members.grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--padding-large);
+  }
+
+  #members.list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+    #members.list .card {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 2rem;
+    padding: var(--padding-large);
+  }
+
+    #members.list .card img {
+    width: 200px; 
+    height: auto;
+    object-fit: cover;
+  }
+
+  #members.list .card-content {
+    flex: 1;
+  }
 
 
+  .footer-container {
+    flex-direction: row;
+    text-align: left;
+  }
 
+ .home-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 1rem;
+  }
 
+  .weather-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .spotlights {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+/* --- Mobile (Less than 767px) --- */
+@media (max-width: 767px) {
+    .footer-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+.navigation li {
+    width: 100%;
+}
+
+.navigation a {
+    text-align: center;
+}
+
+   #members.list .card {
+    text-align: center;
+  }
+  
+  #members.list .card img {
+    width: 100%;
+    margin-bottom: var(--padding-medium);
+  }
+
+  .footer-center {
+    justify-content: center;
+  }
+
+   h2 {
+    font-size: 20px;
+  }
+
+  .logo img {
+    width: 70px;
+  }
+}
 
 /* --- Extra Small Mobile Devices (Less than 400px) --- */
 @media (max-width: 400px) {
@@ -61,233 +164,4 @@ header, main, .footer {
   .footer-right {
     font-size: 12px;
   }
-
-  /* HERO SECTION */
-  .hero-label {
-    bottom: 20px;
-    right: 20px;
-  }
-
-  .cta {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.85rem;
-  }
-
-
-  /* GRID SECTION */
-  .grid-container {
-    gap: 0.75rem;
-    padding: 0.75rem;
-  }
-
-
-  /* CARD HEADERS */
-  .card h3 {
-    font-size: 1rem;
-    padding: 0.5rem;
-  }
-
-
-  /* EVENTS */
-  #event-list {
-    padding: 0.75rem;
-    font-size: 0.9rem;
-  }
-
-
-  /* WEATHER */
-  .weather-layout {
-    flex-direction: column;
-    text-align: center;
-    gap: 6px;
-    padding: 0.75rem;
-  }
-
-  .weather-layout img {
-    width: 55px;
-  }
-
-  .weather-details .temp {
-    font-size: 1.2rem;
-  }
-
-  .weather-details {
-    font-size: 0.85rem;
-  }
-
-
-  /* FORECAST */
-  #forecast-info {
-    padding: 0.75rem;
-    font-size: 0.9rem;
-  }
-
-
-  /* SPOTLIGHTS */
-  .spotlights {
-    padding: 0.75rem;
-  }
-
-  .spotlights h3 {
-    font-size: 1.2rem;
-  }
-
-
-  /* SPOTLIGHT CONTAINER */
-  #spotlight-container {
-    gap: 0.75rem;
-  }
-
-
-  /* SPOTLIGHT CARD */
-  .spotlight-card {
-    padding: 0.75rem;
-  }
-
-  .spotlight-card img {
-    width: 60px;
-  }
-
-  .spotlight-card h4 {
-    font-size: 1rem;
-  }
 }
-
-/* --- Mobile Less than 767px) --- */
-@media (max-width: 767px) {
-    .footer-container {
-    flex-direction: column;
-    gap: 1.5rem;
-    text-align: center;
-  }
-
-   #members.list .card {
-    text-align: center;
-  }
-  
-  #members.list .card img {
-    width: 100%;
-    margin-bottom: var(--padding-medium);
-  }
-
-  .footer-center {
-    justify-content: center;
-  }
-
-   h2 {
-    font-size: 20px;
-  }
-
-  .logo img {
-    width: 70px;
-  }
-}
-
-
-
-
-/* --- Tablet and Desktop (Greater than 768px) --- */
-@media (min-width: 768px) {
-      #hamburger {
-    display: none;
-    font-size: 2rem;
-    margin-left: auto;
-
-  }
-
-  .navigation {
-    display: flex;
-    gap: 1.5rem;
-  }
-
-  .navigation li {
-    margin: 0;
-  }
-
-   #members.grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--padding-large);
-  }
-
-  #members.list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-    #members.list .card {
-    display: flex;
-    align-items: center;
-    text-align: left;
-    gap: 2rem;
-    padding: var(--padding-large);
-  }
-
-    #members.list .card img {
-    width: 200px; 
-    height: auto;
-    object-fit: cover;
-  }
-
-  #members.list .card-content {
-    flex: 1;
-  }
-
-
-  .footer-container {
-    flex-direction: row;
-    text-align: left;
-  }
-
-  /* HERO IMAGE HEIGHT */
-
-.hero img {
-    height: 500px;
-    object-fit: cover;
-}
-
-
-/* MAIN GRID LAYOUT */
-
-.grid-container {
-    grid-template-columns: 2fr 1fr 1fr;
-    max-width: 1200px;
-    margin: auto;
-}
-
-/* EVENTS BOX HEIGHT */
-.events {
-    min-height: 180px;
-}
-
-
-/* WEATHER SECTION */
-.weather-current {
-    text-align: center;
-}
-
-.weather-forecast {
-    text-align: center;
-}
-
-
-/* SPOTLIGHT GRID */
-#spotlight-container {
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 1200px;
-    margin: auto;
-}
-
-
-/* SPOTLIGHT CARD */
-.spotlight-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.spotlight-card img {
-    width: 90px;
-}
-}
-

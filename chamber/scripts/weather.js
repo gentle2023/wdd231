@@ -1,7 +1,6 @@
 const currentTemp = document.querySelector('#current-temp');
 const weatherIcon = document.querySelector('#weather-icon');
 const description = document.querySelector('#description');
-
 const high = document.querySelector('#high');
 const low = document.querySelector('#low');
 const humidity = document.querySelector('#humidity');

@@ -1,75 +1,97 @@
-const currentTemp = document.querySelector('#current-temp');
-const weatherIcon = document.querySelector('#weather-icon');
-const description = document.querySelector('#description');
-const high = document.querySelector('#high');
-const low = document.querySelector('#low');
-const humidity = document.querySelector('#humidity');
-const sunrise = document.querySelector('#sunrise');
-const sunset = document.querySelector('#sunset');
+const apiKey = "3cc618cadc2bb04e2e31ce9bc3a4f421"; 
+const city = "Akwanga"; 
 
-const currentURL = 'https://api.openweathermap.org/data/2.5/weather?lat=8.91667&lon=8.38333&units=metric&appid=3cc618cadc2bb04e2e31ce9bc3a4f421';
+const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
 
-async function apiFetch() {
-  const response = await fetch(url);
-  const data = await response.json();
+async function getWeather() {
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
 
-  console.log(data);
+    // Temperature
+    document.getElementById("current-temp").textContent = `${Math.round(data.main.temp)}°C`;
 
-  // main temp
-  currentTemp.innerHTML = `${data.main.temp}&deg;C`;
+    // Description
+    document.getElementById("description").textContent = data.weather[0].description;
 
-  // description
-  description.textContent = data.weather[0].description;
+    // High & Low
+    document.getElementById("high").textContent = `${Math.round(data.main.temp_max)}°C`;
+    document.getElementById("low").textContent = `${Math.round(data.main.temp_min)}°C`;
 
-  // icon
-  const iconSrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
-  weatherIcon.src = iconSrc;
-  weatherIcon.alt = data.weather[0].description;
+    // Humidity
+    document.getElementById("humidity").textContent = `${data.main.humidity}%`;
 
-  // extra data
-  high.textContent = `${data.main.temp_max}°C`;
-  low.textContent = `${data.main.temp_min}°C`;
-  humidity.textContent = `${data.main.humidity}%`;
+    // Sunrise & Sunset (convert from UNIX timestamp)
+    const sunrise = new Date(data.sys.sunrise * 1000);
+    const sunset = new Date(data.sys.sunset * 1000);
 
-  // convert sunrise/sunset
-  const sunriseTime = new Date(data.sys.sunrise * 1000);
-  const sunsetTime = new Date(data.sys.sunset * 1000);
+    document.getElementById("sunrise").textContent = sunrise.toLocaleTimeString();
+    document.getElementById("sunset").textContent = sunset.toLocaleTimeString();
 
-  sunrise.textContent = sunriseTime.toLocaleTimeString();
-  sunset.textContent = sunsetTime.toLocaleTimeString();
+    // Weather Icon
+    const iconCode = data.weather[0].icon;
+    const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+
+    const iconElement = document.getElementById("weather-icon");
+    iconElement.src = iconUrl;
+    iconElement.alt = data.weather[0].description;
+
+  } catch (error) {
+    console.error("Error fetching weather:", error);
+  }
 }
 
-apiFetch();
 
-const forecastEl = document.querySelector('#forecast');
+getWeather();
 
-const forecastURL = 'https://api.openweathermap.org/data/2.5/forecast?lat=8.91667&lon=8.38333&units=metric&appid=3cc618cadc2bb04e2e31ce9bc3a4f421';
+
+async function getCoordinates() {
+  const geoUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`;
+  const response = await fetch(geoUrl);
+  const data = await response.json();
+  return {
+    lat: data[0].lat,
+    lon: data[0].lon
+  };
+}
+
 
 async function getForecast() {
   try {
-    const response = await fetch(forecastURL);
+    const { lat, lon } = await getCoordinates();
 
-    if (response.ok) {
-      const data = await response.json();
+    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+    const response = await fetch(forecastUrl);
+    const data = await response.json();
 
-        const threeDays = data.list.filter((item, index) => index % 8 === 0).slice(0, 3);
 
-      forecastEl.innerHTML = threeDays.map(day => {
-        const date = new Date(day.dt * 1000);
+    const dailyForecasts = data.list.filter(item =>
+      item.dt_txt.includes("12:00:00")
+    ).slice(0, 3); 
 
-          const dayName = date.toLocaleDateString('en-US', { weekday: 'long' });
+    
+    let output = "";
 
-        return `${dayName}: <strong>${Math.round(day.main.temp)}°C</strong>`;
-      }).join("<br>");
+    dailyForecasts.forEach(day => {
+      const date = new Date(day.dt_txt);
+      const dayName = date.toLocaleDateString("en-US", { weekday: "long" });
 
-    } else {
-      throw Error(await response.text());
-    }
+      const temp = Math.round(day.main.temp);
+      const desc = day.weather[0].description;
+
+      output += `
+        <strong>${dayName}</strong>: ${temp}°C - ${desc} <br>
+      `;
+    });
+
+    document.getElementById("forecast").innerHTML = output;
 
   } catch (error) {
-    console.log(error);
+    console.error("Error fetching forecast:", error);
+    document.getElementById("forecast").textContent = "Unable to load forecast.";
   }
 }
+
 
 getForecast();
 

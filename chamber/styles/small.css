@@ -244,7 +244,7 @@ h2 {
 .home-card {
   background: var(--white);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  height: 300px;
+  height: 350px;
  }
 
 .home-card h3 {
@@ -271,12 +271,6 @@ h2 {
   padding: 1rem;
 }
 
-/* WEATHER */
-.weather-content img {
-  width: 60px;
-  margin-left: 20px;
-}
-
 /* WEATHER CARD LAYOUT */
 .weather-content {
   display: flex;
@@ -286,8 +280,8 @@ h2 {
 
 /* ICON */
 .weather-content img {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
 }
 
 /* TEXT */
@@ -304,6 +298,7 @@ h2 {
 .forecast p {
   font-size: 1.2rem;
   line-height: 1.8;
+  text-align: center;
 }
 
 .forecast strong {

@@ -7,7 +7,7 @@ const humidity = document.querySelector('#humidity');
 const sunrise = document.querySelector('#sunrise');
 const sunset = document.querySelector('#sunset');
 
-const url = 'https://api.openweathermap.org/data/2.5/forecast?lat=8.91667&lon=8.38333&units=metric&appid=3cc618cadc2bb04e2e31ce9bc3a4f421';
+const currentURL = 'https://api.openweathermap.org/data/2.5/weather?lat=8.91667&lon=8.38333&units=metric&appid=3cc618cadc2bb04e2e31ce9bc3a4f421';
 
 async function apiFetch() {
   const response = await fetch(url);

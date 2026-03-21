@@ -28,7 +28,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-   max-width: 100%;
+  max-width: 100%;
 }
 
 body {
@@ -61,7 +61,9 @@ header {
 }
 
 .logo h1 {
-  font-family: var(--heading-font);
+  font-size: 1.5rem;
+  white-space: nowrap;
+  font-family: var(--nav-font);
 }
 
 /* NAVIGATION */
@@ -149,13 +151,13 @@ h2 {
   border-radius: var(--radius);
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   text-align: center;
+  line-height: 1.5;
 }
 
 .card img {
   width: 100%;
   border-radius: var(--radius);
 }
-
 
 /* VIEW BUTTONS */
 
@@ -167,17 +169,12 @@ h2 {
 }
 
 .view-buttons button {
-  padding: 0.9rem 1rem;
+  padding: 0.8rem 1rem;
   border: none;
-  background: var(--view-buttons);
+  background: var(--primary-color);
   color: var(--white);
   cursor: pointer;
 }
-
-.view-buttons button:hover {
-  opacity: 0.8;
-}
-
 
 
 /* FOOTER */
@@ -237,31 +234,32 @@ h2 {
   position: absolute;
   bottom: 60px;
   right: 60px;
-  background: var(--secondary-color);
+  background: var(--primary-color);
   color: white;
   padding: 0.9rem 1.2rem;
-  border-radius: 8px;
   text-decoration: none;
 }
 
 /* CARDS */
 .home-card {
   background: var(--white);
-  padding: 1rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
+  height: 300px;
+ }
 
 .home-card h3 {
   background: var(--heading-color);
   color: white;
-  margin: -1rem -1rem 1rem -1rem;
-  padding: 0.5rem;
+  padding: 0.9rem;
   text-align: center;
+  margin-bottom: 10px;
 }
 
  .events p {
   font-size: 1.2rem;
   text-align: center;
+  line-height: 1.2;
+  margin: 10px;
  }
 
 
@@ -274,8 +272,9 @@ h2 {
 }
 
 /* WEATHER */
-.weather img {
+.weather-content img {
   width: 60px;
+  margin-left: 20px;
 }
 
 /* WEATHER CARD LAYOUT */
@@ -294,12 +293,12 @@ h2 {
 /* TEXT */
 .weather-info p {
   margin: 0.2rem 0;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 /* TEMP */
 #current-temp {
-  font-size: 1.4rem;
+  font-size: 1.7rem;
 }
 
 .forecast p {
@@ -325,6 +324,7 @@ h2 {
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   text-align: center;
+  line-height: 1.5;
 }
 
 .spotlight-card img {

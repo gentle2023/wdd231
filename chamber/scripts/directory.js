@@ -13,10 +13,10 @@ function displayMembers(members){
 
 members.forEach(member => {
 
-let card = document.createElement("section");
+let card = document.createElement("div");
 card.classList.add("card");
 
-let name = document.createElement("h3");
+let name = document.createElement("h2");
 name.textContent = member.name;
 
 let address = document.createElement("p");

@@ -248,7 +248,7 @@ h2 {
   height: 350px;
  }
 
-.home-card h3 {
+.home-card h2 {
   background: var(--heading-color);
   color: white;
   padding: 0.9rem;

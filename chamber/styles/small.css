@@ -34,7 +34,6 @@
 
 body {
   font-family: var(--body-font);
-  background: var(--background-color);
   color: var(--text-color);
   margin: 0;
 }
@@ -327,142 +326,272 @@ h2 {
   width: 100px;
 }
 
-/* LAYOUT */
-
-.join-container {
-display:grid;
-grid-template-columns:1fr;
-gap:30px;
+/* Join Form */
+.join-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--white);
 }
 
-/* FORM */
-
-.form-section {
-background: var(--white);
-padding:20px;
-border-radius:8px;
-box-shadow:0 2px 8px rgba(0,0,0,.1);
+/* Form Styling */
+.form-section form label {
+    display: block;
+    margin-bottom: 15px;
+    font-family: "Play", sans-serif;
+    color: var(--gray-color);
 }
 
-form {
-display:flex;
-flex-direction:column;
-gap:15px;
-}
-
-label {
-display:flex;
-flex-direction:column;
-font-size:.9rem;
-}
-
-
-textarea {
-min-height:80px;
-}
-
-input[type="submit"] {
-background: var(--primary-color);
-color:white;
-border:none;
-padding:10px;
-cursor:pointer;
-}
-
-input[type="submit"]:hover {
-background:#0f3ea8;
-}
-
-
-/* MEMBERSHIP CARDS */
-
-.membership-section {
-display:flex;
-flex-direction:column;
-gap:15px;
-}
-
-.membership-card {
-background:var(--membership-card);
-padding:20px;
-border-radius:12px;
-text-align:center;
-border:1px solid #aaa; 
-margin-bottom:15px;
-opacity:1;
-transform:translateY(0);
-animation:cardFade 0.8s ease forwards;
-}
-
-.membership-card:nth-of-type(1){animation-delay:.2s;}
-.membership-card:nth-of-type(2){animation-delay:.4s;}
-.membership-card:nth-of-type(3){animation-delay:.6s;}
-.membership-card:nth-of-type(4){animation-delay:.8s;}
- 
-.membership-card button {
-margin-top:10px;
-padding: 12px;
-cursor:pointer;
-}
-
-.membership-card h3 {
-  color: var(--white);
-}
-
-@keyframes membership-cardFade{
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-/* MODALS */
-
-dialog {
-padding:20px;
-border:none;
-border-radius:10px;
-max-width:400px;
-margin-top: 300px;
-margin-left: 300px;
-background-color: var(--primary-color);
-color: var(--white);
-}
-
-/* Base style */
-
-input,
-select,
-textarea {
+.form-section input, .form-section select, .form-section textarea {
+    display: block;
     width: 100%;
     padding: 15px;
-    border: 1px solid #ccc;
-    border-left: 6px solid #ccc;
+    border: 1px solid #999;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+/* Membership Cards */
+.membership-card {
+    background-color: #C0DF85;
+    border: 1px solid #333;
+    border-radius: 15px; 
+    padding: 25px;
+    margin-bottom: 15px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    opacity: 0; 
+    transform: scale(0.9);
+    animation: cardEntry 0.6s ease forwards;
+}
+
+.membership-card p {
+    color: #333;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+}
+
+@keyframes cardEntry {
+    to { opacity: 1; transform: scale(1); }
+}
+
+.membership-card:nth-child(2) { animation-delay: 0.2s; }
+.membership-card:nth-child(3) { animation-delay: 0.4s; }
+.membership-card:nth-child(4) { animation-delay: 0.6s; }
+.membership-card:nth-child(5) { animation-delay: 0.8s; }
+
+/* Learn More buttons */
+.open-modal {
+    background-color: #ffffff; 
+    color: #333;               
+    border: 1px solid #777;    
+    padding: 8px 20px;         
+    font-family: "Poppins", sans-serif;        
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;       
+    transition: all 0.2s ease-in-out;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2); 
+    margin-top: 10px;
+              
+}
+
+/* Hover effect */
+.open-modal:hover {
+    background-color: #f0f0f0; 
+    border-color: #333;        
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3); 
+    transform: translateY(-1px); 
+}
+
+.open-modal:active {
+    transform: translateY(1px); 
+    box-shadow: none;
+}
+
+/* Modal Styling */
+dialog {
+    border: none;
+    border-radius: 8px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+     position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0; 
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.7);
+    -webkit-backdrop-filter: blur(5px); 
+    backdrop-filter: blur(5px); 
+}
+
+.close-modal {
+    display: block;
+    margin: 1.5rem auto 0 auto;
+    padding: 10px 25px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
     border-radius: 4px;
-    transition: border-left 0.3s ease;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.close-modal:hover {
+    background-color: #555;
 }
 
 
-/* VALID INPUT */
+/* Target all inputs except the submit button */
+.form-section input:not([type="submit"]),
+.form-section select,
+.form-section textarea {
+    border: 1px solid #999; 
+    border-left: 8px solid #999; 
+    border-style: solid;
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 20px 0;
+    box-sizing: border-box; 
+    transition: border-color 0.3s ease;
+}
 
-input:not(:placeholder-shown):valid {
-    border-left: 6px solid green;
+/* Invalid State - Red */
+.form-section input:not([type="submit"]):not(:placeholder-shown):invalid,
+.form-section select:not(:placeholder-shown):invalid {
+    border-left-color: #d12f2f !important;
+}
+
+/* Valid State - Green */
+.form-section input:not([type="submit"]):valid,
+.form-section select:valid,
+.form-section textarea:valid {
+    border-left-color: #2a8a2a !important;
 }
 
 
-/* INVALID INPUT */
-
-input:not(:placeholder-shown):invalid {
-    border-left: 6px solid red;
+.submit-btn {
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 14px 24px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 
-/* textarea */
-
-textarea:not(:placeholder-shown):valid {
-    border-left: 6px solid green;
+/* Thank You Page */
+.thankyou-content {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
 }
 
-textarea:not(:placeholder-shown):invalid {
-    border-left: 6px solid red;
+.thankyou-content h1 {
+    color: #2a8a2a; 
+    margin-bottom: 10px;
+}
+
+/* Submission Summary */
+#submission-summary {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 30px;
+    text-align: left; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+#submission-summary h2 {
+    border-bottom: 2px solid #2a8a2a;
+    padding-bottom: 10px;
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #444;
+}
+
+/* Individual Data Rows */
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee; 
+}
+
+.info-item:nth-child(even) {
+    background-color: #f1f1f1;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.info-item strong {
+    color: #555;
+    font-weight: 600;
+}
+
+.info-item span {
+    color: #000;
+    word-break: break-all; 
+}
+
+/* Back Button */
+.back-home {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #444;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.back-home:hover {
+    background-color: #222;
+}
+
+.thankyou-footer {
+    margin-top: 40px;
+    padding-bottom: 20px;
+}
+
+/* Return Home Button */
+.back-home {
+    display: inline-block;
+    background-color: #333; 
+    color: #ffffff;
+    text-decoration: none; 
+    padding: 12px 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.back-home:hover {
+    background-color: #ffffff;
+    color: #333;
+    border: 2px solid #333; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transform: translateY(-2px); 
+}
+
+.back-home:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
 }

@@ -65,12 +65,9 @@
   .spotlights {
     grid-template-columns: repeat(3, 1fr);
   }
-
-  .join-container{
-grid-template-columns: 1fr 1fr;
-}
-
-
+.join-main {
+        grid-template-columns: 1fr 1fr; 
+    }
 
 }
 

@@ -44,182 +44,118 @@
 </nav>
 </header>
 
-<main class="join-container">
+<main class="join-main">
+        <section class="form-section">
+            <h2>Membership Application Form</h2>
+            <form method="get" action="thankyou.html">
+                <label>First Name
+                    <input type="text" name="fname" autocomplete="given-name" required title="Enter your first name">
+                </label>
+                <label>Last Name
+                    <input type="text" name="lname" autocomplete="family-name" required title="Enter your last name">
+                </label>
+                <label>Title
+                    <input type="text" name="title" autocomplete="organization-title" 
+                           pattern="[A-Za-z\s-]{7,}" title="Alpha characters, hyphens, and spaces only. Min 7 chars." required>
+                           <small>Min. 7 characters; letters, spaces, and hyphens only.</small>
+                </label>
+                <label>Email
+                    <input type="email" name="email" placeholder="ijeoma@gmail.com" autocomplete="email" required title="Enter a valid email">
+                </label>
+                <label>Cell Phone
+                    <input type="tel" name="phone" placeholder="+234 803 123 4567" autocomplete="tel" required title="Enter your phone number">
+                </label>
+                <label>Organization
+                    <input type="text" name="organization" autocomplete="organization" required title="Enter your organization name">
+                </label>
+                
+                <label>Membership Level
+                    <select name="membership" required>
+                        <option value="" selected disabled>Select a Level</option>
+                        <option value="np">Non-Profit (NP)</option>
+                        <option value="bronze">Bronze</option>
+                        <option value="silver">Silver</option>
+                        <option value="gold">Gold</option>
+                    </select>
+                </label>
 
-<!-- FORM SECTION -->
-<section class="form-section">
-<h2>Membership Application Form</h2>
+                <label>Organization Description
+                    <textarea name="description" title="Describe your business"></textarea>
+                </label>
 
-<form method="get" action="thankyou.html">
+                <input type="hidden" id="timestamp" name="timestamp">
+                <button type="submit" class="submit-btn">Apply for Membership</button>
+            </form>
+        </section>
 
-<label>
-First Name
-<input type="text"
-name="fname"
-title="Enter your first name"
-autocomplete="given-name"
-required placeholder="First Name">
-</label>
+        <section class="levels-section">
+            <h2>Membership Levels</h2>
+            <div class="membership-card" id="np-card">
+                <p>Non Profit Membership Level</p>
+                <button type="button" class="open-modal" data-modal="np-modal">Learn More</button>
+            </div>
+            <div class="membership-card" id="bronze-card">
+                <p>Bronze Membership Level</p>
+                <button type="button" class="open-modal" data-modal="bronze-modal">Learn More</button>
+            </div>
+            <div class="membership-card" id="silver-card">
+                <p>Silver Membership Level</p>
+                <button type="button" class="open-modal" data-modal="silver-modal">Learn More</button>
+            </div>
+            <div class="membership-card" id="gold-card">
+                <p>Gold Membership Level</p>
+                <button type="button" class="open-modal" data-modal="gold-modal">Learn More</button>
+            </div>
+        </section>
 
-<label>
-Last Name
-<input type="text"
-name="lname"
-title="Enter your last name"
-autocomplete="family-name"
-required placeholder="Last Name">
-</label>
-
-<label>
-Organizational Title
-<input type="text"
-name="orgtitle"
-title="Your title in the organization"
-autocomplete="organization-title"
-pattern="[A-Za-z\-\s]{7,}" placeholder="Organisation Title">
-</label>
-
-<label>
-Email
-<input type="email"
-name="email"
-title="Enter your email"
-placeholder="example@email.com"
-autocomplete="email"
-required>
-</label>
-
-<label>
-Mobile Phone
-<input type="tel"
-name="phone"
-title="Enter your mobile number"
-autocomplete="tel"
-required placeholder="+234 8068133269">
-</label>
-
-<label>
-Organization Name
-<input type="text"
-name="organization"
-title="Enter your organization name"
-autocomplete="organization"
-required placeholder="organisational Name">
-</label>
-
-<label>
-Membership Level
-<select name="membership" required>
-<option value="">Select Membership</option>
-<option value="np">NP Membership</option>
-<option value="bronze">Bronze Membership</option>
-<option value="silver">Silver Membership</option>
-<option value="gold">Gold Membership</option>
-</select>
-</label>
-
-<label>
-Organization Description
-<textarea name="description" title="Describe your organization" placeholder="Orgabisational description"></textarea>
-</label>
-
-<input type="hidden" id="timestamp" name="timestamp">
-
-<input type="submit" value="Apply for Membership">
-
-</form>
-</section>
-
-
-<!-- MEMBERSHIP CARDS -->
-<section class="membership-section">
-
-<h2>Membership Levels</h2>
-
-<div class="membership-card">
-<h3>Non Profit Membership Level</h3>
-<button type="button" onclick="openModal('npModal')">Learn More</button>
-
-<dialog id="npModal">
-<h4>NP Membership</h4>
-<p>No fee membership for nonprofit organizations.</p>
-<p>Includes networking events and community support.</p>
-<button type="button" onclick="closeModal('npModal')">Close</button>
+        <dialog id="np-modal">
+    <h3>Non-Profit Membership Benefits</h3>
+    <ul>
+        <li><strong>Eligibility:</strong> Exclusive to 501(c)(3) organizations.</li>
+        <li><strong>Basic Listing:</strong> Inclusion in our digital community directory.</li>
+        <li><strong>Event Access:</strong> Invitation to monthly community mixers.</li>
+        <li><strong>Newsletter:</strong> Subscription to the "Chamber Pulse" weekly update.</li>
+    </ul>
+    <button type="button" class="close-modal">Close</button>
 </dialog>
 
-</div>
-
-
-<div class="membership-card">
-<h3>Bronze Membership Level</h3>
-<button type="button" onclick="openModal('bronzeModal')">Learn More</button>
-
-<dialog id="bronzeModal">
-<h4>Bronze Membership</h4>
-<p>Access to networking events and training workshops.</p>
-<button type="button" onclick="closeModal('bronzeModal')">Close</button>
+<dialog id="bronze-modal">
+    <h3>Bronze Membership Benefits</h3>
+    <ul>
+        <li><strong>General Membership:</strong> Open to all small businesses and startups.</li>
+        <li><strong>Enhanced Listing:</strong> Directory listing with your business logo and social media links.</li>
+        <li><strong>Spotlight Feature:</strong> One "New Member Spotlight" post on our official Facebook page.</li>
+        <li><strong>Training:</strong> Access to "Business Basics" webinar recordings.</li>
+        <li><strong>Ribbon Cutting:</strong> Complimentary grand opening or anniversary ceremony support.</li>
+    </ul>
+    <button type="button" class="close-modal">Close</button>
 </dialog>
 
-</div>
-
-
-<div class="membership-card">
-<h3>Silver Membership Level</h3>
-<button type="button" onclick="openModal('silverModal')">Learn More</button>
-
-<dialog id="silverModal">
-<h4>Silver Membership</h4>
-<p>Includes advertising opportunities and event discounts.</p>
-<button type="button" onclick="closeModal('silverModal')">Close</button>
+<dialog id="silver-modal">
+    <h3>Silver Membership Benefits</h3>
+    <ul>
+        <li><strong>All Bronze Benefits included.</strong></li>
+        <li><strong>Training Workshops:</strong> Free access for up to 3 employees.</li>
+        <li><strong>Spotlight Feature:</strong> One dedicated social media post per quarter.</li>
+        <li><strong>Directory Upgrade:</strong> Priority placement in the digital member directory.</li>
+        <li><strong>Event Discounts:</strong> 10% discount on all Chamber banquet tickets.</li>
+    </ul>
+    <button type="button" class="close-modal">Close</button>
 </dialog>
 
-</div>
-
-
-<div class="membership-card">
-<h3>Gold Membership Level</h3>
-<button type="button" onclick="openModal('goldModal')">Learn More</button>
-
-<dialog id="goldModal">
-<h4>Gold Membership</h4>
-<p>Premium benefits including homepage spotlight and VIP events.</p>
-<button type="button" onclick="closeModal('goldModal')">Close</button>
+<dialog id="gold-modal">
+    <h3>Gold Membership Benefits</h3>
+    <ul>
+        <li><strong>All Silver Benefits included.</strong></li>
+        <li><strong>Homepage Spotlight:</strong> Permanent logo placement on the Chamber homepage.</li>
+        <li><strong>VIP Access:</strong> 2 complimentary tickets to the Annual Gala.</li>
+        <li><strong>Keynote Opportunities:</strong> First priority for speaking slots at networking luncheons.</li>
+        <li><strong>Ad Credits:</strong> &#8358;15,000 annual credit toward Chamber digital advertising.</li>
+        <li><strong>Board Eligibility:</strong> Exclusive eligibility to run for the Chamber Board of Directors.</li>
+    </ul>
+    <button type="button" class="close-modal">Close</button>
 </dialog>
-
-</div>
-
-</section>
-
 </main>
-
-<!-- MODALS -->
-
-<dialog id="npModal">
-<h3>NP Membership</h3>
-<p>No fee membership for non-profit organizations.</p>
-<p>Benefits include networking and community events.</p>
-<button type="button" onclick="closeModal('npModal')">Close</button>
-</dialog>
-
-<dialog id="bronzeModal">
-<h3>Bronze Membership</h3>
-<p>Entry level membership with event discounts and networking.</p>
-<button type="button" onclick="closeModal('bronzeModal')">Close</button>
-</dialog>
-
-<dialog id="silverModal">
-<h3>Silver Membership</h3>
-<p>Includes advertising opportunities and training events.</p>
-<button type="button" onclick="closeModal('silverModal')">Close</button>
-</dialog>
-
-<dialog id="goldModal">
-<h3>Gold Membership</h3>
-<p>Premium membership with homepage spotlight advertising and special events.</p>
-<button type="button" onclick="closeModal('goldModal')">Close</button>
-</dialog>
-
-  
 
 <footer class="footer">
   <div class="footer-container">

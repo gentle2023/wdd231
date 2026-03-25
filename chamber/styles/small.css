@@ -9,6 +9,7 @@
   --white: #ffffff;
   --footer-bg: #111111;
   --heading-color: #3a3838;
+  --card-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
   /* Font Variables */
   --heading-font: "Poppins", sans-serif;
@@ -242,7 +243,7 @@ h2 {
 /* CARDS */
 .home-card {
   background: var(--white);
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: var(--card-shadow);
   height: 350px;
  }
 
@@ -316,7 +317,7 @@ h2 {
   background: var(--white);
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: var(--card-shadow);
   text-align: center;
   line-height: 1.5;
 }
@@ -380,7 +381,7 @@ h2 {
     padding: 25px;
     margin-bottom: 15px;
     text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: var(--card-shadow);
     opacity: 0; 
     transform: scale(0.9);
     animation: cardEntry 0.6s ease forwards;

@@ -561,15 +561,3 @@ dialog::backdrop {
     margin-top: 30px;
 }
 
-.back-home:hover {
-    background-color: var(--white);
-    color: var(--dark-grey);
-    border: 2px solid var(--dark-grey); 
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    transform: translateY(-2px); 
-}
-
-.back-home:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
-}

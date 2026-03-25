@@ -446,11 +446,6 @@ dialog::backdrop {
     transition: background 0.3s;
 }
 
-.close-modal:hover {
-    background-color: #555;
-}
-
-
 /* Target all inputs except the submit button */
 .form-section input:not([type="submit"]),
 .form-section select,
@@ -547,21 +542,6 @@ dialog::backdrop {
     word-break: break-all; 
 }
 
-/* Back Button */
-.back-home {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 10px 20px;
-    background-color: #444;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background 0.3s;
-}
-
-.back-home:hover {
-    background-color: #222;
-}
 
 .thankyou-footer {
     margin-top: 40px;
@@ -581,6 +561,7 @@ dialog::backdrop {
     border: 2px solid transparent;
     transition: all 0.3s ease;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin-top: 30px;
 }
 
 .back-home:hover {

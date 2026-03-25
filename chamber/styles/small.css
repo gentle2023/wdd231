@@ -4,7 +4,7 @@
   --primary-color: #042729;     
   --secondary-color: #F4B400;    
   --background-color: #F5F5F5;
-  --membership-card : #4b4c4d;
+  --membership-card-bg: #C0DF85;
    --text-color: #222222;
   --white: #ffffff;
   --footer-bg: #111111;
@@ -345,18 +345,37 @@ h2 {
     color: var(--gray-color);
 }
 
-.form-section input, .form-section select, .form-section textarea {
+/* Target all inputs except the submit button */
+.form-section input:not([type="submit"]),
+.form-section select,
+.form-section textarea {
     display: block;
     width: 100%;
-    padding: 15px;
-    border: 1px solid #999;
+    padding: 12px;
+    margin: 8px 0 20px 0;
+    border: 1px solid #999; 
+    border-left: 8px solid #999; 
     border-radius: 5px;
-    margin-top: 5px;
+    box-sizing: border-box; 
+    transition: border-color 0.3s ease;
+}
+
+/* Invalid State - Red */
+.form-section input:not([type="submit"]):not(:placeholder-shown):invalid,
+.form-section select:not(:placeholder-shown):invalid {
+    border-left-color: #d12f2f !important;
+}
+
+/* Valid State - Green */
+.form-section input:not([type="submit"]):valid,
+.form-section select:valid,
+.form-section textarea:valid {
+    border-left-color: #2a8a2a !important;
 }
 
 /* Membership Cards */
 .membership-card {
-    background-color: #C0DF85;
+    background-color: var(--membership-card-bg);
     border: 1px solid #333;
     border-radius: 15px; 
     padding: 25px;
@@ -414,6 +433,7 @@ h2 {
 
 /* Modal Styling */
 dialog {
+    position: fixed;
     border: none;
     border-radius: 8px;
     padding: 2rem;
@@ -444,34 +464,6 @@ dialog::backdrop {
     border-radius: 4px;
     font-weight: bold;
     transition: background 0.3s;
-}
-
-/* Target all inputs except the submit button */
-.form-section input:not([type="submit"]),
-.form-section select,
-.form-section textarea {
-    border: 1px solid #999; 
-    border-left: 8px solid #999; 
-    border-style: solid;
-    display: block;
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0 20px 0;
-    box-sizing: border-box; 
-    transition: border-color 0.3s ease;
-}
-
-/* Invalid State - Red */
-.form-section input:not([type="submit"]):not(:placeholder-shown):invalid,
-.form-section select:not(:placeholder-shown):invalid {
-    border-left-color: #d12f2f !important;
-}
-
-/* Valid State - Green */
-.form-section input:not([type="submit"]):valid,
-.form-section select:valid,
-.form-section textarea:valid {
-    border-left-color: #2a8a2a !important;
 }
 
 

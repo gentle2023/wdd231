@@ -11,6 +11,12 @@
   --footer-bg: #111111;
   --heading-color: #3a3838;
   --card-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  --error-red: #d12f2f;
+  --success-green: #2a8a2a;
+  --input-border: #999999;
+  --dark-grey: #333333;
+  --light-grey: #f1f1f1;
+  --border-light: #eeeeee;
 
   /* Font Variables */
   --heading-font: "Poppins", sans-serif;
@@ -147,12 +153,15 @@ h2 {
 /* MEMBER CARD */
 
 .card {
-  background: var(--white);
-  padding: var(--padding-medium);
-  border-radius: var(--radius);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+   padding: var(--padding-medium);
   text-align: center;
   line-height: 1.5;
+}
+
+.card, .home-card, .spotlight-card, #submission-summary {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
 }
 
 .card img {
@@ -236,21 +245,19 @@ h2 {
   bottom: 60px;
   right: 60px;
   background: var(--primary-color);
-  color: white;
+  color: var(--white);
   padding: 0.9rem 1.2rem;
   text-decoration: none;
 }
 
 /* CARDS */
 .home-card {
-  background: var(--white);
-  box-shadow: var(--card-shadow);
-  height: 350px;
+   height: 350px;
  }
 
 .home-card h2 {
   background: var(--heading-color);
-  color: white;
+  color: var(--white);
   padding: 0.9rem;
   text-align: center;
   margin-bottom: 10px;
@@ -315,10 +322,8 @@ h2 {
 
 /* SPOTLIGHT CARD */
 .spotlight-card {
-  background: var(--white);
-  padding: 1rem;
+ padding: 1rem;
   border-radius: 8px;
-  box-shadow: var(--card-shadow);
   text-align: center;
   line-height: 1.5;
 }
@@ -361,8 +366,8 @@ h2 {
     width: 100%;
     padding: 12px;
     margin: 8px 0 20px 0;
-    border: 1px solid #999; 
-    border-left: 8px solid #999; 
+    border: 1px solid var(--input-border); 
+    border-left: 8px solid var(--border-light); 
     border-radius: 5px;
     box-sizing: border-box; 
     transition: border-color 0.3s ease;
@@ -371,20 +376,20 @@ h2 {
 /* Invalid State - Red */
 .form-section input:not([type="submit"]):not(:placeholder-shown):invalid,
 .form-section select:not(:placeholder-shown):invalid {
-    border-left-color: #d12f2f !important;
+    border-left-color: var(--error-red) !important;
 }
 
 /* Valid State - Green */
 .form-section input:not([type="submit"]):valid,
 .form-section select:valid,
 .form-section textarea:valid {
-    border-left-color: #2a8a2a !important;
+border-left-color: var(--success-green) !important;
 }
 
 /* Membership Cards */
 .membership-card {
     background-color: var(--membership-card-bg);
-    border: 1px solid #333;
+    border: 1px solid var(--dark-grey);
     border-radius: 15px; 
     padding: 25px;
     margin-bottom: 15px;
@@ -396,7 +401,7 @@ h2 {
 }
 
 .membership-card p {
-    color: #333;
+    color: var(--dark-grey);
     font-family: var(--heading-font);
     font-weight: bold;
 }
@@ -412,9 +417,9 @@ h2 {
 
 /* Learn More buttons */
 .open-modal {
-    background-color: #ffffff; 
-    color: #333;               
-    border: 1px solid #777;    
+    background-color: var(--white); 
+    color: var(--dark-grey);               
+    border: 1px solid var(--input-border);    
     padding: 8px 20px;         
     font-family: var(--heading-font);        
     font-size: 1rem;
@@ -424,14 +429,6 @@ h2 {
     box-shadow: 1px 1px 3px rgba(0,0,0,0.2); 
     margin-top: 10px;
               
-}
-
-/* Hover effect */
-.open-modal:hover {
-    background-color: #f0f0f0; 
-    border-color: #333;        
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.3); 
-    transform: translateY(-1px); 
 }
 
 .open-modal:active {
@@ -467,7 +464,7 @@ dialog::backdrop {
     padding: 15px 25px;
     cursor: pointer;
     background-color: #333;
-    color: white;
+    color: var(--white);
     border: none;
     border-radius: 4px;
     font-weight: bold;
@@ -478,7 +475,7 @@ dialog::backdrop {
 .submit-btn {
     border: none;
     background-color: var(--primary-color);
-    color: white;
+    color: var(--white);
     padding: 14px 24px;
     border-radius: 5px;
     cursor: pointer;
@@ -495,14 +492,14 @@ dialog::backdrop {
 }
 
 .thankyou-content h1 {
-    color: #2a8a2a; 
+    color: var(--success-green);
     margin-bottom: 10px;
 }
 
 /* Submission Summary */
 #submission-summary {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    background-color: var(--light-grey);
+    border: 1px solid var(--input-border);
     border-radius: 8px;
     padding: 25px;
     margin-top: 30px;
@@ -511,7 +508,7 @@ dialog::backdrop {
 }
 
 #submission-summary h2 {
-    border-bottom: 2px solid #2a8a2a;
+    border-bottom: 2px solid var(--success-green);
     padding-bottom: 10px;
     margin-top: 0;
     font-size: 1.2rem;
@@ -523,11 +520,11 @@ dialog::backdrop {
     display: flex;
     justify-content: space-between;
     padding: 12px 0;
-    border-bottom: 1px solid #eee; 
+    border-bottom: 1px solid var(--input-border); 
 }
 
 .info-item:nth-child(even) {
-    background-color: #f1f1f1;
+    background-color: var(--light-grey);
     padding-left: 5px;
     padding-right: 5px;
 }
@@ -538,7 +535,7 @@ dialog::backdrop {
 }
 
 .info-item span {
-    color: #000;
+    color: var(--dark-grey);
     word-break: break-all; 
 }
 
@@ -551,8 +548,8 @@ dialog::backdrop {
 /* Return Home Button */
 .back-home {
     display: inline-block;
-    background-color: #333; 
-    color: #ffffff;
+    background-color: var(--dark-grey); 
+    color: var(--white);
     text-decoration: none; 
     padding: 12px 30px;
     font-family: var(--heading-font);
@@ -565,9 +562,9 @@ dialog::backdrop {
 }
 
 .back-home:hover {
-    background-color: #ffffff;
-    color: #333;
-    border: 2px solid #333; 
+    background-color: var(--white);
+    color: var(--dark-grey);
+    border: 2px solid var(--dark-grey); 
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     transform: translateY(-2px); 
 }

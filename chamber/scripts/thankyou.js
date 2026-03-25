@@ -24,4 +24,3 @@
                 resultsContainer.appendChild(infoDiv);
             }
         });
-

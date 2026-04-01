@@ -1,0 +1,212 @@
+[
+  {
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "genre": "Classic",
+    "image": "https://covers.openlibrary.org/b/id/7222246-L.jpg",
+    "description": "A portrait of the Jazz Age and the mysterious millionaire Jay Gatsby."
+  },
+  {
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "genre": "Sci-Fi",
+    "image": "https://covers.openlibrary.org/b/id/10543200-L.jpg",
+    "description": "A sprawling epic of politics, religion, and survival on the desert planet Arrakis."
+  },
+  {
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasy",
+    "image": "https://covers.openlibrary.org/b/id/6979861-L.jpg",
+    "description": "The adventure of Bilbo Baggins as he seeks to reclaim a lost treasure from a dragon."
+  },
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "genre": "Dystopian",
+    "image": "https://covers.openlibrary.org/b/id/7222249-L.jpg",
+    "description": "A chilling prophecy about the future under a totalitarian regime of constant surveillance."
+  },
+  {
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "genre": "Classic",
+    "image": "https://covers.openlibrary.org/b/id/8225266-L.jpg",
+    "description": "A story of teenage rebellion and isolation through the eyes of Holden Caulfield."
+  },
+  {
+    "title": "Foundation",
+    "author": "Isaac Asimov",
+    "genre": "Sci-Fi",
+    "image": "https://covers.openlibrary.org/b/id/10522197-L.jpg",
+    "description": "A mathematician predicts the fall of a galactic empire and seeks to preserve knowledge."
+  },
+  {
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "genre": "Romance",
+    "image": "https://covers.openlibrary.org/b/id/10419409-L.jpg",
+    "description": "A sparkling comedy of manners and marriage in 19th-century England."
+  },
+  {
+    "title": "The Shining",
+    "author": "Stephen King",
+    "genre": "Horror",
+    "image": "https://covers.openlibrary.org/b/id/8115668-L.jpg",
+    "description": "A family isolated in a haunted hotel faces a descent into madness."
+  },
+  {
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "genre": "Dystopian",
+    "image": "https://covers.openlibrary.org/b/id/8106132-L.jpg",
+    "description": "A future society where people are genetically engineered and kept happy through drugs."
+  },
+  {
+    "title": "Neuromancer",
+    "author": "William Gibson",
+    "genre": "Cyberpunk",
+    "image": "https://covers.openlibrary.org/b/id/10523287-L.jpg",
+    "description": "The definitive cyberpunk novel about a washed-up hacker hired for one last job."
+  },
+  {
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "genre": "Adventure",
+    "image": "https://covers.openlibrary.org/b/id/10396431-L.jpg",
+    "description": "A shepherd boy travels to Egypt in search of a treasure located near the Pyramids."
+  },
+  {
+    "title": "Circe",
+    "author": "Madeline Miller",
+    "genre": "Mythology",
+    "image": "https://covers.openlibrary.org/b/id/10404499-L.jpg",
+    "description": "The daughter of the sun god Helios finds her power and path on the island of Aiaia."
+  },
+  {
+    "title": "Project Hail Mary",
+    "author": "Andy Weir",
+    "genre": "Sci-Fi",
+    "image": "https://covers.openlibrary.org/b/id/10756557-L.jpg",
+    "description": "A lone astronaut must save the Earth from an extinction-level event."
+  },
+  {
+    "title": "The Night Circus",
+    "author": "Erin Morgenstern",
+    "genre": "Fantasy",
+    "image": "https://covers.openlibrary.org/b/id/10543231-L.jpg",
+    "description": "A magical competition between two young illusionists unfolds within a mysterious circus."
+  },
+  {
+    "title": "Good Omens",
+    "author": "Terry Pratchett & Neil Gaiman",
+    "genre": "Comedy",
+    "image": "https://covers.openlibrary.org/b/id/10543232-L.jpg",
+    "description": "An angel and a demon team up to prevent the Apocalypse."
+  },
+  {
+    "title": "The Last Jihad",
+    "author": "Joel C. Rosenberg",
+    "genre": "Political Thriller",
+    "image": "https://covers.openlibrary.org/b/id/8316315-L.jpg",
+    "description": "A high-stakes thriller involving a massive terror attack and a path to war in the Middle East."
+  },
+  {
+    "title": "The Copper Scroll",
+    "author": "Joel C. Rosenberg",
+    "genre": "Political Thriller",
+    "image": "https://covers.openlibrary.org/b/id/10834375-L.jpg",
+    "description": "A search for the treasures of the Second Temple leads to international danger."
+  },
+  {
+    "title": "The Kremlin Conspiracy",
+    "author": "Joel C. Rosenberg",
+    "genre": "Political Thriller",
+    "image": "https://covers.openlibrary.org/b/id/8354089-L.jpg",
+    "description": "An American operative must stop a Russian dictator from launching a nuclear strike."
+  },
+  {
+    "title": "The Persian Gamble",
+    "author": "Joel C. Rosenberg",
+    "genre": "Political Thriller",
+    "image": "https://covers.openlibrary.org/b/id/10134440-L.jpg",
+    "description": "Marcus Ryker returns to stop a secret nuclear deal between Russia and Iran."
+  },
+  {
+    "title": "Jurassic Park",
+    "author": "Michael Crichton",
+    "genre": "Techno-Thriller",
+    "image": "https://covers.openlibrary.org/b/id/8231903-L.jpg",
+    "description": "Genetically engineered dinosaurs escape their enclosures on a remote island park."
+  },
+  {
+    "title": "The Andromeda Strain",
+    "author": "Michael Crichton",
+    "genre": "Sci-Fi",
+    "image": "https://covers.openlibrary.org/b/id/10398457-L.jpg",
+    "description": "A military satellite returns to Earth carrying a deadly extraterrestrial organism."
+  },
+  {
+    "title": "Congo",
+    "author": "Michael Crichton",
+    "genre": "Adventure",
+    "image": "https://covers.openlibrary.org/b/id/10313833-L.jpg",
+    "description": "An expedition into the heart of Africa searches for rare diamonds guarded by deadly apes."
+  },
+  {
+    "title": "Sphere",
+    "author": "Michael Crichton",
+    "genre": "Sci-Fi",
+    "image": "https://covers.openlibrary.org/b/id/8115682-L.jpg",
+    "description": "A team of scientists discovers a mysterious spacecraft at the bottom of the ocean."
+  },
+  {
+    "title": "Prey",
+    "author": "Michael Crichton",
+    "genre": "Techno-Thriller",
+    "image": "https://covers.openlibrary.org/b/id/8233773-L.jpg",
+    "description": "A swarm of predatory nanobots escapes a lab and begins evolving in the desert."
+  },
+  {
+    "title": "State of Fear",
+    "author": "Michael Crichton",
+    "genre": "Thriller",
+    "image": "https://covers.openlibrary.org/b/id/8231945-L.jpg",
+    "description": "Eco-terrorists attempt to manipulate the climate to create global panic."
+  },
+  {
+    "title": "The Jerusalem Assassin",
+    "author": "Joel C. Rosenberg",
+    "genre": "Political Thriller",
+    "image": "https://covers.openlibrary.org/b/id/10300688-L.jpg",
+    "description": "Marcus Ryker races against time to prevent the assassination of Middle Eastern leaders."
+  },
+  {
+    "title": "The Great Train Robbery",
+    "author": "Michael Crichton",
+    "genre": "Historical Fiction",
+    "image": "https://covers.openlibrary.org/b/id/6255146-L.jpg",
+    "description": "A mastermind heist takes place in Victorian London on a moving train."
+  },
+  {
+    "title": "Timeline",
+    "author": "Michael Crichton",
+    "genre": "Sci-Fi",
+    "image": "https://covers.openlibrary.org/b/id/8231911-L.jpg",
+    "description": "Quantum technology sends a group of historians back to 14th-century France."
+  },
+  {
+    "title": "Pirate Latitudes",
+    "author": "Michael Crichton",
+    "genre": "Adventure",
+    "image": "https://covers.openlibrary.org/b/id/10419330-L.jpg",
+    "description": "A high-seas adventure involving privateers and a Spanish treasure ship in the 1600s."
+  },
+  {
+    "title": "The Twelfth Imam",
+    "author": "Joel C. Rosenberg",
+    "genre": "Political Thriller",
+    "image": "https://covers.openlibrary.org/b/id/10404456-L.jpg",
+    "description": "A CIA agent uncovers a plot involving the rise of a messianic leader in Iran."
+  }
+]

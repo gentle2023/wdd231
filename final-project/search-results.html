@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/larger.css">
   <script src="scripts/main.js" defer></script>
+    <script src="scripts/results.js" defer></script>
 </head>
 
 <body>
@@ -41,62 +42,36 @@
 
     <!-- NAV LINKS -->
     <nav class="nav-menu" id="navMenu">
-      <a href="index.html" class="active">Home</a>
+      <a href="index.html">Home</a>
       <a href="about-us.html">About Us</a>
       <a href="library.html">Library</a>
       <a href="reading-list.html">Reading List</a>
-      <a hidden href="search.html">Search</a>
+      <a hidden href="search.html" class="active">Search</a>
       <a href="contact-us.html">Contact Us</a>
       <a href="sign-up.html" class="btn">Sign Up</a>
     </nav>
 
   </div>
 </header>
+<!-- Main Content -->
+ <main class="results-container">
+        <section class="card">
+            <h2>Form Data Received</h2>
+            <p>Thank you for using LibriLog! We received the following search request:</p>
+            
+            <div id="results-display" class="results-box">
+                </div>
 
-<main>
-        <section class="hero">
-            <div class="hero-content">
-                <h2>Your Digital Sanctuary for Stories</h2>
-                <p>Search, track, and discover your next favorite book.</p>
-                <form action="search-results.html" method="get" class="search-form">
-                    <input type="text" name="query" placeholder="Search by title, author, or genre..." required>
-                    <button type="submit">Search</button>
-                </form>
-            </div>
+            <p class="next-steps">
+                Searching for <strong><span id="user-query">...</span></strong>? 
+                Check out our full collection in the library.
+            </p>
+            
+            <a href="library.html" class="cta-button">Go to Library</a>
         </section>
+    </main>
 
-        <section class="genres">
-            <h2>Explore Featured Genres</h2>
-            <div class="genre-grid">
-                <div class="genre-card">
-                    <img src="images/fiction.jpg" alt="Fiction" loading="lazy">
-                    <h3>Fiction</h3>
-                    <p>Escape into worlds limited only by imagination.</p>
-                </div>
-                <div class="genre-card">
-                    <img src="images/sci-fi.jpg" alt="Sci-Fi" loading="lazy">
-                    <h3>Sci-Fi</h3>
-                    <p>Explore the future and the boundaries of science.</p>
-                </div>
-                <div class="genre-card">
-                    <img src="images/mystery.jpg" alt="Mystery" loading="lazy">
-                    <h3>Mystery</h3>
-                    <p>Unravel secrets and solve the unsolvable.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="featured-books">
-    <h2>Recommended for You</h2>
-    <div id="book-container" class="book-grid">
-        </div>
-</section>
-
-</main>
-
-  
-
-
+<!-- Footer -->
 <footer class="site-footer">
   <div class="footer-content">
 

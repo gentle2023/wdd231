@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LibreLog | Read a Book Today</title>
+  <title>LibreLog | Library</title>
   <meta name="description"
         content="LibriLog is your personal book tracker, helping you discover new genres, view detailed book metadata, and maintain a persistent 'To-Read' list. Start your reading journey today!">
   <meta name="author" content="Ijeaoma Jacinta Ani">
@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/larger.css">
   <script src="scripts/main.js" defer></script>
+  <script src="scripts/library.js" defer></script>
+
 </head>
 
 <body>
@@ -41,9 +43,9 @@
 
     <!-- NAV LINKS -->
     <nav class="nav-menu" id="navMenu">
-      <a href="index.html" class="active">Home</a>
+      <a href="index.html">Home</a>
       <a href="about-us.html">About Us</a>
-      <a href="library.html">Library</a>
+      <a href="library.html" class="active">Library</a>
       <a href="reading-list.html">Reading List</a>
       <a hidden href="search.html">Search</a>
       <a href="contact-us.html">Contact Us</a>
@@ -52,51 +54,22 @@
 
   </div>
 </header>
-
+<!-- Main Content -->
 <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h2>Your Digital Sanctuary for Stories</h2>
-                <p>Search, track, and discover your next favorite book.</p>
-                <form action="search-results.html" method="get" class="search-form">
-                    <input type="text" name="query" placeholder="Search by title, author, or genre..." required>
-                    <button type="submit">Search</button>
-                </form>
-            </div>
+        <section class="library-controls">
+            <h2>All Books</h2>
+            <p>Click a book to see details or save it to your list.</p>
         </section>
+        
+        <div id="library-grid" class="book-grid"></div>
 
-        <section class="genres">
-            <h2>Explore Featured Genres</h2>
-            <div class="genre-grid">
-                <div class="genre-card">
-                    <img src="images/fiction.jpg" alt="Fiction" loading="lazy">
-                    <h3>Fiction</h3>
-                    <p>Escape into worlds limited only by imagination.</p>
-                </div>
-                <div class="genre-card">
-                    <img src="images/sci-fi.jpg" alt="Sci-Fi" loading="lazy">
-                    <h3>Sci-Fi</h3>
-                    <p>Explore the future and the boundaries of science.</p>
-                </div>
-                <div class="genre-card">
-                    <img src="images/mystery.jpg" alt="Mystery" loading="lazy">
-                    <h3>Mystery</h3>
-                    <p>Unravel secrets and solve the unsolvable.</p>
-                </div>
-            </div>
-        </section>
+        <dialog id="book-modal">
+            <div id="modal-content"></div>
+            <button type="button" id="close-modal">Close</button>
+        </dialog>
+    </main>
 
-        <section class="featured-books">
-    <h2>Recommended for You</h2>
-    <div id="book-container" class="book-grid">
-        </div>
-</section>
-
-</main>
-
-  
-
-
+ <!-- Footer -->
 <footer class="site-footer">
   <div class="footer-content">
 

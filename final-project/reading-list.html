@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LibreLog | Read a Book Today</title>
+  <title>LibreLog | Reading List</title>
   <meta name="description"
         content="LibriLog is your personal book tracker, helping you discover new genres, view detailed book metadata, and maintain a persistent 'To-Read' list. Start your reading journey today!">
   <meta name="author" content="Ijeaoma Jacinta Ani">
@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/larger.css">
   <script src="scripts/main.js" defer></script>
+    <script src="scripts/reading-list.js" defer></script>
 </head>
 
 <body>
@@ -41,10 +42,10 @@
 
     <!-- NAV LINKS -->
     <nav class="nav-menu" id="navMenu">
-      <a href="index.html" class="active">Home</a>
+      <a href="index.html">Home</a>
       <a href="about-us.html">About Us</a>
       <a href="library.html">Library</a>
-      <a href="reading-list.html">Reading List</a>
+      <a href="reading-list.html" class="active">Reading List</a>
       <a hidden href="search.html">Search</a>
       <a href="contact-us.html">Contact Us</a>
       <a href="sign-up.html" class="btn">Sign Up</a>
@@ -52,51 +53,22 @@
 
   </div>
 </header>
-
+<!-- Main Content -->
 <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h2>Your Digital Sanctuary for Stories</h2>
-                <p>Search, track, and discover your next favorite book.</p>
-                <form action="search-results.html" method="get" class="search-form">
-                    <input type="text" name="query" placeholder="Search by title, author, or genre..." required>
-                    <button type="submit">Search</button>
-                </form>
-            </div>
+        <section class="list-header">
+            <h2>Your Saved Books</h2>
+            <p id="list-count">You have 0 books in your list.</p>
         </section>
-
-        <section class="genres">
-            <h2>Explore Featured Genres</h2>
-            <div class="genre-grid">
-                <div class="genre-card">
-                    <img src="images/fiction.jpg" alt="Fiction" loading="lazy">
-                    <h3>Fiction</h3>
-                    <p>Escape into worlds limited only by imagination.</p>
-                </div>
-                <div class="genre-card">
-                    <img src="images/sci-fi.jpg" alt="Sci-Fi" loading="lazy">
-                    <h3>Sci-Fi</h3>
-                    <p>Explore the future and the boundaries of science.</p>
-                </div>
-                <div class="genre-card">
-                    <img src="images/mystery.jpg" alt="Mystery" loading="lazy">
-                    <h3>Mystery</h3>
-                    <p>Unravel secrets and solve the unsolvable.</p>
-                </div>
+        
+        <div id="reading-list-grid" class="book-grid">
             </div>
-        </section>
 
-        <section class="featured-books">
-    <h2>Recommended for You</h2>
-    <div id="book-container" class="book-grid">
+        <div id="empty-message" class="hidden">
+            <p>Your list is currently empty. Visit the <a href="library.html">Library</a> to add some books!</p>
         </div>
-</section>
+    </main>
 
-</main>
-
-  
-
-
+<!-- Footer -->
 <footer class="site-footer">
   <div class="footer-content">
 

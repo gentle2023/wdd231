@@ -376,14 +376,14 @@ h2 {
 /* Invalid State - Red */
 .form-section input:not([type="submit"]):not(:placeholder-shown):invalid,
 .form-section select:not(:placeholder-shown):invalid {
-    border-left-color: var(--error-red) !important;
+    border-left-color: var(--error-red);
 }
 
 /* Valid State - Green */
 .form-section input:not([type="submit"]):valid,
 .form-section select:valid,
 .form-section textarea:valid {
-border-left-color: var(--success-green) !important;
+border-left-color: var(--success-green);
 }
 
 /* Membership Cards */

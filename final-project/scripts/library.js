@@ -11,7 +11,7 @@ async function fetchBooks() {
         if (!response.ok) throw new Error("Network response was not ok");
         const books = await response.json();
         
-        // 2. Process data with an Array Method
+        // Process data with an Array Method
         renderLibrary(books);
     } catch (error) {
         console.error("Fetch Error:", error);
@@ -21,7 +21,7 @@ async function fetchBooks() {
 
 // Dynamic Content Generation using Template Literals
 function renderLibrary(books) {
-    libraryGrid.innerHTML = ""; // Clear grid
+    libraryGrid.innerHTML = ""; 
     
     books.forEach(book => {
         const card = document.createElement("div");

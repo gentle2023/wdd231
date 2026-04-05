@@ -21,25 +21,25 @@ const featuredBooks = [
         title: "The Kremlin Conspiracy",
         author: "Joel C. Rosenberg",
         genre: "Fiction",
-        image: "images/kremlin-conspiracy.jpg"
+        image: "images/kremlin.webp"
     },
     {
         title: "Jurassic Park",
         author: "Michael Crichton",
         genre: "Sci-Fi",
-        image: "images/jurassic-park.jpg"
+        image: "images/jurassic.webp"
     },
     {
         title: "The Hobbit",
         author: "J.R.R. Tolkien",
         genre: "Fantasy",
-        image: "https://covers.openlibrary.org/b/id/6979861-L.jpg"
+        image: "images/hobbit.webp"
     },
     {
         title: "1984",
         author: "George Orwell",
         genre: "Dystopian",
-        image: "https://covers.openlibrary.org/b/id/7222249-L.jpg"
+        image: "images/1984.webp"
     }
 ];
 

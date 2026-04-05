@@ -69,9 +69,15 @@
   .btn:hover {
     background: var(--primary-color);
   }
+
+  .book-card img {
+    width: 200px;
+    height: 314px;
+    object-fit: contain;
+    border-radius: 4px;
+    margin-bottom: 10px;
 }
-
-
+}
 
 
 /* =========================

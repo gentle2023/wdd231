@@ -92,9 +92,10 @@ h1, h2, h3 {
 .btn {
   background: var(--secondary-color);
   color: var(--text-color);
-  padding: 10px 20px;
-  border-radius: 20px;
+  padding: 15px 25px;
+  border-radius: 50px;
   font-weight: bold;
+  font-size: 1rem;
 }
 
 /* Hamburger */

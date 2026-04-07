@@ -1,0 +1,17 @@
+@media (min-width: 641px) and (max-width: 1024px) {
+  .book-grid {
+    grid-template-columns: 1fr 1fr;
+    /* 16 rows of 2 */
+    grid-template-areas: 
+      "book-0 book-1"   "book-2 book-3"   "book-4 book-5"   "book-6 book-7"
+      "book-8 book-9"   "book-10 book-11" "book-12 book-13" "book-14 book-15"
+      "book-16 book-17" "book-18 book-19" "book-20 book-21" "book-22 book-23"
+      "book-24 book-25" "book-26 book-27" "book-28 book-29" "book-30 book-31";
+  }
+ 
+  .book-card {
+    grid-template-columns: 150px 1fr;
+    grid-template-areas: "card-image card-text";
+    text-align: left;
+  }
+}

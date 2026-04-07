@@ -2,24 +2,10 @@
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
-    margin-right: 40px;
+    margin-right: 20px;
 }
 
-  .hamburger span {
-    width: 20px;     
-    height: 2px;     
-    margin: 3px 0;   
-  }
-
-  .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(4px, 4px);
-  }
-
-  .hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(4px, -4px);
-  }
-
-   .logo-text h1 {
+  .logo-text h1 {
     font-size: 30px;
   }
 
@@ -119,3 +105,30 @@
     margin-bottom: 10px; 
 }
 }
+
+/* Large Screens (1025px and above): 4 Columns */
+@media (min-width: 1025px) {
+  .book-grid {
+    /* Define 4 equal columns */
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-areas: 
+      "book-0  book-1  book-2  book-3"
+      "book-4  book-5  book-6  book-7"
+      "book-8  book-9  book-10 book-11"
+      "book-12 book-13 book-14 book-15"
+      "book-16 book-17 book-18 book-19"
+      "book-20 book-21 book-22 book-23"
+      "book-24 book-25 book-26 book-27"
+      "book-28 book-29 book-30 book-31";
+  }
+
+    .book-card {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "card-image"
+      "card-text";
+    text-align: center;
+  }
+
+}
+

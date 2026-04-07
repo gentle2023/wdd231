@@ -28,6 +28,16 @@ body {
   overflow-x: hidden;
 }
 
+.library {
+  padding: 20px;
+}
+
+.library-controls {
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+}
+
 h1, h2, h3 {
   font-family: var(--heading-font);
   color: var(--primary-color);
@@ -100,34 +110,43 @@ h1, h2, h3 {
 
 /* Hamburger */
 .hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  border: none;
-  background: none;
-  z-index: 1001;
+    display: none; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    z-index: 1001;
+    padding: 10px; 
+    width: 45px;   
+    height: 45px;
+    box-sizing: border-box;
 }
 
 .hamburger span {
-  width: 25px;
-  height: 3px;
-  background: var(--navbar-color);
-  margin: 5px 0;
-  display: block;
-  transition: all 0.3s ease;
+    width: 25px;
+    height: 25px;
+    background: var(--navbar-color);
+    margin: 3px 0; 
+    display: block;
+    transition: all 0.3s ease;
 }
 
+/* THE PERFECT 'X' ALIGNMENT */
 .hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+    transform: translateY(9px) rotate(45deg);
 }
 
 .hamburger.active span:nth-child(2) {
-  opacity: 0;
+    opacity: 0;
 }
 
 .hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
+   transform: translateY(-9px) rotate(-45deg);
 }
+
+
 
 /* --- Hero Section --- */
 .hero {
@@ -208,10 +227,18 @@ h1, h2, h3 {
 
 .book-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 2rem;
   padding: 1rem 0;
 }
+
+ .book-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "book-0" "book-1" "book-2" "book-3" "book-4" "book-5" "book-6" "book-7"
+      "book-8" "book-9" "book-10" "book-11" "book-12" "book-13" "book-14" "book-15"
+      "book-16" "book-17" "book-18" "book-19" "book-20" "book-21" "book-22" "book-23"
+      "book-24" "book-25" "book-26" "book-27" "book-28" "book-29" "book-30" "book-31";
+  }
 
 .book-card {
   background-color: var(--white);

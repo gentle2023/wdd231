@@ -208,5 +208,19 @@
     "genre": "Political Thriller",
     "image": "images/imam.webp",
     "description": "A CIA agent uncovers a plot involving the rise of a messianic leader in Iran."
+  },
+  {
+    "title": "He Chose the Nails: What God Did to Win Your Heart",
+    "author": "Max Lucado",
+    "genre": "Christian Living",
+    "image": "images/pains.webp",
+    "description": "A powerful exploration of the crucifixion and its significance for humanity."
+  },
+  {
+    "title": "Where Is God When It Hurts?",
+    "author": "Philip Yancey",
+    "genre": "Christian Living",
+    "image": "images/hurts.webp",
+    "description": "An honest look at the problem of pain and suffering, and how faith can provide comfort and hope."
   }
 ]

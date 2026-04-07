@@ -73,52 +73,56 @@ header {
   font-family: var(--nav-font);
 }
 
-/* NAVIGATION */
-
+/* --- HAMBURGER BUTTON --- */
 #hamburger {
-  font-size: 2rem;
-  border: none;
-  background: none;
-  color: var(--white);
-  cursor: pointer;
+    font-size: 1.8rem;       
+    background: none;        
+    border: none;
+    color: var(--white);
+    cursor: pointer;
 }
 
+/* --- NAVIGATION --- */
 .navigation {
-  display: none;
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    max-height: 0;          
+    overflow: hidden;        
+    flex-direction: column;  
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    transition: max-height 0.4s ease; 
 }
 
-.navigation.open {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%; 
-  order: 3; 
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  
+
+nav.open .navigation {
+    display: flex;
+    max-height: 500px; 
 }
 
+/* Navigation items */
 .navigation li {
-  margin: var(--padding-small) 0;
+    margin: var(--padding-small) 0;
 }
 
+/* Navigation links */
 .navigation a {
-  text-decoration: none;
-  color: var(--white);
-  font-weight: bold;
-  font-size: 17px;
-  font-family: var(--nav-font);
+    text-decoration: none;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 17px;
+    font-family: var(--nav-font);
 }
 
+/* Active link */
 .navigation a.active {
-  color: var(--secondary-color);
-  border-bottom: 2px solid var(--secondary-color);
-  }
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
 
-  .navigation a:hover {
-  color: var(--secondary-color);
+/* Hover effect */
+.navigation a:hover {
+    color: var(--secondary-color);
 }
 
 /* MAIN */
@@ -571,7 +575,9 @@ dialog::backdrop {
     font-weight: bold;
 }
 
-/* Base Card Styling */
+
+/* Discover Cards */
+
 .discover-card {
     border: 1px solid var(--light-grey);
     padding: 10px;
@@ -580,42 +586,62 @@ dialog::backdrop {
     flex-direction: column;
 }
 
+/* Image container */
+
 .discover-card figure {
     margin: 0;
     overflow: hidden;
 }
+
+/* Image styling */
 
 .discover-card img {
     width: 100%;
     height: auto;
     display: block;
     padding: 10px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.discover-card h2 { 
-  margin-top: 0.5rem; 
-}
-.discover-card address { 
-  font-weight: bold; 
-  color: var(--text-color); 
-  font-size: 1rem; 
-  margin-bottom: 10px;
+/* Image hover effect */
 
+.discover-card img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
 }
 
-.discover-card button { 
-  margin-top: 10px; 
-  padding: 10px; 
-  cursor: pointer; 
-  background-color: var(--primary-color);
-  color: var(--white);
+.discover-card h2 {
+    margin-top: 0.5rem;
 }
 
-/* Grid Setup - Named Areas */
+.discover-card address {
+    font-weight: bold;
+    color: var(--text-color);
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.discover-card button {
+    margin-top: 10px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Mobile Layout */
+
 .discover-grid {
     display: grid;
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
     gap: 20px;
     padding: 20px;
 }
-

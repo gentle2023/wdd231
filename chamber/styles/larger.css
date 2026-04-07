@@ -171,6 +171,22 @@ header, main, .footer {
 
 /* Large: Custom Layout (1025px and above) */
 @media (min-width: 1025px) {
+
+   #hamburger {
+        display: none;
+    }
+
+      .navigation {
+        display: flex;         
+        flex-direction: row;   
+        max-height: none;      
+        overflow: visible;     
+        justify-content: space-around; 
+    }
+
+    .navigation li {
+        margin: 0 0.7rem;        
+    }
     .discover-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -188,6 +204,10 @@ header, main, .footer {
 
 }
 
+@media (min-width: 1025px) {
+    /* Hide the hamburger button on desktop */
+   
+}
 
 .card-1 { grid-area: card1; }
 .card-2 { grid-area: card2; }

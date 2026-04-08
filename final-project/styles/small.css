@@ -216,19 +216,19 @@ h1, h2, h3 {
   height: 314px;
   object-fit: contain;
   border-radius: 4px;
+   transform: translateY(-5px);
 }
 
 /* --- Featured Books --- */
 .featured-books {
-  padding: 50px;
+  padding: 50px 50px 0 50px;
   background-color: var(--white);
   text-align: center;
 }
 
 .book-grid {
   display: grid;
-  gap: 2rem;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
 }
 
  .book-grid {
@@ -252,7 +252,7 @@ h1, h2, h3 {
   transition: transform 0.2s ease;
 }
 
-.book-card:hover {
+.book-card:hover, .genre-card:hover {
   transform: translateY(-5px);
 }
 
@@ -261,6 +261,7 @@ h1, h2, h3 {
   height: 314px;
   object-fit: contain;
   border-radius: 4px;
+  transform: translateY(-5px);
 }
 
 .book-card h3 {

@@ -125,6 +125,11 @@ nav.open .navigation {
     color: var(--secondary-color);
 }
 
+nav#primary-nav.open .navigation {
+    display: flex;
+    max-height: 500px; 
+}
+
 /* MAIN */
 
 main {

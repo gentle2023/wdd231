@@ -187,26 +187,70 @@ header, main, .footer {
     .navigation li {
         margin: 0 0.7rem;        
     }
-    .discover-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-areas:
-            "card1 card2 card3 card4"
-            "card5 card6 card7 card8";
-        gap: 20px;
-    }
-
-
-    .discover-card img:hover {
-        transform: scale(1.1);
-        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    }
-
+   
 }
 
 @media (min-width: 1025px) {
-    /* Hide the hamburger button on desktop */
+    #hamburger {
+        display: none;
+    }
    
+}
+
+@media (min-width: 1025px) {
+    .discover-grid {
+        display: grid;
+        /* Now we use 2 columns for the large screen */
+        grid-template-columns: 1fr 1fr; 
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+        gap: 30px;
+    }
+
+    .discover-card {
+    display: grid;
+    /* Two columns: Image (left) and Content (right) */
+    grid-template-columns: 250px 1fr; 
+    grid-template-areas: 
+        "figure title"
+        "figure addr"
+        "figure desc"
+        "figure btn";
+    gap: 10px 20px;
+    align-items: start;
+}
+
+/* Now, link the actual HTML tags to these names */
+.discover-card figure { 
+    grid-area: figure; 
+    margin: 0; 
+}
+
+.discover-card h2 { 
+    grid-area: title; 
+    margin: 0; 
+    font-size: 1.5rem; 
+}
+
+.discover-card address { 
+    grid-area: addr; 
+    font-style: italic; 
+    margin: 5px 0; 
+}
+
+.discover-card p { 
+    grid-area: desc; 
+    margin: 0; 
+}
+
+.discover-card button { 
+    grid-area: btn; 
+    justify-self: start; /* Keeps button from stretching */
+    margin-top: 10px;
+}
 }
 
 .card-1 { grid-area: card1; }

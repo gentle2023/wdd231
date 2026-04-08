@@ -54,7 +54,7 @@
 
 .discover-card button { 
     grid-area: btn; 
-    justify-self: start; /* Keeps button from stretching */
+    justify-self: start; 
     margin-top: 10px;
 }
 }

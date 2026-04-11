@@ -99,7 +99,7 @@ h1, h2, h3 {
   font-weight: bold;
 }
 
-.btn {
+.signup-btn {
   background: var(--secondary-color);
   color: var(--text-color);
   padding: 15px 25px;
@@ -523,7 +523,7 @@ dialog::backdrop {
     }
 
     /* Card CSS */
-    .card {
+    .resource-card {
       background-color: var(--primary-color);
       border-radius: 1rem;
       color: var(--white);
@@ -536,23 +536,23 @@ dialog::backdrop {
       text-align: center;
     }
 
-.card:hover {
+.resource-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     }
 
   
-    .card a {
+    .resource-card a {
       color: var(--secondary-color);
       text-decoration: underline;
       font-weight: bold;
     }
 
-    .card a:hover {
+    .resource-card a:hover {
       text-decoration: underline;
     }
 
-    .card p {
+    .resource-card p {
       margin: 0;
       font-size: 1rem;
     }

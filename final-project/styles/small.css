@@ -151,7 +151,7 @@ h1, h2, h3 {
 
 /* --- Hero Section --- */
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/hero-bg.jpg');
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/hero-bg.webp');
   width: 100%;
   height: 600px;
   background-size: cover;

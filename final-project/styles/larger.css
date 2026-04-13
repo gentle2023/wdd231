@@ -1,5 +1,9 @@
 /* MOBILE */
 @media (max-width: 768px) {
+
+  .navbar {
+  color: var(--navbar-color); 
+}
   .hamburger {
     display: flex;
     margin-right: 20px;

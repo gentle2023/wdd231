@@ -59,6 +59,7 @@ h1, h2, h3 {
   background: var(--primary-color);
   padding: 15px 0;
   border-bottom: 2px solid var(--white);
+  color: var(--white);
 }
 
 .nav-wrapper {

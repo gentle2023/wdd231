@@ -93,7 +93,7 @@ h1, h2, h3 {
   display: flex;
   gap: 25px;
   align-items: center;
-  background: transparent;
+  background: var(--primary-color);
 }
 
 .nav-menu a {
@@ -154,6 +154,7 @@ h1, h2, h3 {
 .hero {
   background: linear-gradient(var(--overlay), var(--overlay)),
               url('../images/hero-bg.webp') center/cover;
+              background-color: #1D201F;
   height: 600px;
   color: var(--white);
   padding: 150px 20px;

@@ -1,8 +1,13 @@
 /* MOBILE */
 @media (max-width: 768px) {
 
-  .navbar {
-  color: var(--navbar-color); 
+.navbar {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.navbar * {
+  color: var(--white);
 }
   .hamburger {
     display: flex;

@@ -93,6 +93,7 @@ h1, h2, h3 {
   display: flex;
   gap: 25px;
   align-items: center;
+  background: transparent;
 }
 
 .nav-menu a {

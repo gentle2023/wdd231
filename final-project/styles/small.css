@@ -1,7 +1,7 @@
 :root { 
   /* Colors */
   --background-color: #f4f4f4;
-  --navbar-color: #f1f1f1;
+  --navbar-color: #ffffff;
   --primary-color: #1D201F;
   --secondary-color: #FFAE03;
   --secondary-hover-color: #e69c00;
@@ -13,7 +13,7 @@
   --success-hover: #218838;
   --success-active: #1e7e34;
   --disabled-color: #6c757d;
-  --overlay: rgba(0,0,0,0.6);
+  --overlay: rgba(0, 0, 0, 0.6);
   --backdrop: rgba(0,0,0,0.7);
 
   /* Effects */

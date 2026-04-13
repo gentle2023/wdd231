@@ -34,16 +34,16 @@ function renderList(books) {
             <h3 class="${isRead}">${book.title}</h3>
             <p>By: ${book.author}</p>
             <div class="card-buttons">
-                <button class="status-btn">${book.completed ? "Mark Unread" : "Mark Read"}</button>
-                <button class="remove-btn">Remove</button>
+                <button class="status-button">${book.completed ? "Mark Unread" : "Mark Read"}</button>
+                <button class="remove-button">Remove</button>
             </div>
         `;
 
         // Event: Toggle Read/Unread status
-        card.querySelector(".status-btn").addEventListener("click", () => toggleStatus(index));
+        card.querySelector(".status-button").addEventListener("click", () => toggleStatus(index));
         
         // Event: Remove book from list
-        card.querySelector(".remove-btn").addEventListener("click", () => removeBook(index));
+        card.querySelector(".remove-button").addEventListener("click", () => removeBook(index));
 
         listGrid.appendChild(card);
     });

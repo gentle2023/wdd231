@@ -43,17 +43,17 @@ function renderLibrary(books) {
                 <p><strong>Author:</strong> ${book.author}</p>
                 <p class="book-description-short">${book.description ? book.description.substring(0, 100) + '...' : ''}</p>
                 <div class="card-buttons">
-                    <button class="details-btn">Details</button>
-                    <button class="save-btn">Add to List</button>
+                    <button class="details-button">Details</button>
+                    <button class="save-button">Add to List</button>
                 </div>
             </div>
         `;
 
         // Event Handling for Modal
-        card.querySelector(".details-btn").addEventListener("click", () => openModal(book));
+        card.querySelector(".details-button").addEventListener("click", () => openModal(book));
         
         // Event Handling for Local Storage
-        card.querySelector(".save-btn").addEventListener("click", () => saveBook(book));
+        card.querySelector(".save-button").addEventListener("click", () => saveBook(book));
 
         libraryGrid.appendChild(card);
     });

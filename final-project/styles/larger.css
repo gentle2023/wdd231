@@ -1,12 +1,12 @@
 /* MOBILE */
 @media (max-width: 768px) {
 
-.navbar {
+.site-navbar {
   background: var(--primary-color);
   color: var(--white);
 }
 
-.navbar * {
+.site-navbar * {
   color: var(--white);
 }
   .hamburger {
@@ -18,7 +18,7 @@
     font-size: 30px;
   }
 
-  .nav-menu {
+  .nav-links {
     position: absolute;
     top: 80px;
     right: 0;
@@ -31,12 +31,12 @@
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
   }
 
-  .nav-menu a {
+  .nav-links a {
     padding: 10px 0;
     color: var(--white);
   }
 
-  .nav-menu.active {
+  .nav-links.active {
     display: flex;
   }
 
@@ -49,7 +49,7 @@
     margin-bottom: 10px;
     }
 
-  .signup-btn {
+  .signup-button {
     display: block;
     width: 90%;
     text-align: center;
@@ -61,7 +61,7 @@
     color: var(--text-color);
   }
 
-  .signup-btn:hover {
+  .signup-button:hover {
     background: var(--primary-color);
   }
 

@@ -46,7 +46,7 @@ h1, h2, h3 {
 }
 
 /* Layout */
-.library { padding: 20px; }
+.library, .references, .reading-list { padding: 20px; }
 
 .library-controls {
   max-width: 800px;
@@ -55,13 +55,13 @@ h1, h2, h3 {
 }
 
 /* --- NAVBAR --- */
-.navbar {
+.site-navbar {
   background: var(--primary-color);
   padding: 15px 0;
   border-bottom: 2px solid var(--white);
 }
 
-.navbar-container {
+.nav-wrapper {
   max-width: 1200px;
   margin: auto;
   display: flex;
@@ -89,27 +89,27 @@ h1, h2, h3 {
   text-align: center;
 }
 
-.nav-menu {
+.nav-links {
   display: flex;
   gap: 25px;
   align-items: center;
   background: var(--primary-color);
 }
 
-.nav-menu a {
+.nav-links a {
   text-decoration: none;
   color: var(--navbar-color);
   font-family: var(--heading-font);
   font-size: 21px;
 }
 
-.nav-menu a:hover,
-.nav-menu a.active {
+.nav-links a:hover,
+.nav-links a.active {
   color: var(--secondary-color);
   font-weight: bold;
 }
 
-.signup-btn {
+.signup-button {
   background: var(--secondary-color);
   color: var(--text-color);
   padding: 15px 25px;
@@ -263,10 +263,10 @@ h1, h2, h3 {
   padding-top: 1rem;
 }
 
-.details-btn,
-.remove-btn,
-.save-btn,
-.status-btn {
+.details-button,
+.remove-button,
+.save-button,
+.status-button {
   flex: 1;
   padding: 0.8rem;
   border: none;
@@ -275,38 +275,38 @@ h1, h2, h3 {
   font-weight: bold;
 }
 
-.details-btn,
-.status-btn {
+.details-button,
+.status-button {
   background: var(--primary-color);
   color: var(--white);
 }
 
-.remove-btn {
+.remove-button {
   background: var(--secondary-color);
   color: var(--text-color);
 }
 
-.remove-btn:hover {
+.remove-button:hover {
   background: var(--secondary-hover-color);
 }
 
-.save-btn {
+.save-button {
   background: var(--success-color);
   color: var(--white);
   transition: all 0.3s ease;
 }
 
-.save-btn:hover {
+.save-button:hover {
   background: var(--success-hover);
   box-shadow: var(--shadow);
   transform: translateY(-1px);
 }
 
-.save-btn:active {
+.save-button:active {
   background: var(--success-active);
 }
 
-.save-btn:disabled {
+.save-button:disabled {
   background: var(--disabled-color);
   cursor: not-allowed;
   opacity: 0.7;
@@ -488,3 +488,4 @@ dialog::backdrop {
 .resource-card p {
   font-size: 1rem;
 }
+

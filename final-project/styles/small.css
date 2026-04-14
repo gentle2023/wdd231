@@ -287,7 +287,7 @@ h1, h2, h3 {
   color: var(--text-color);
 }
 
-.remove-button:hover {
+.remove-button:hover, .video:hover {
   background: var(--secondary-hover-color);
 }
 

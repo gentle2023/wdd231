@@ -105,9 +105,14 @@ h1, h2, h3 {
 }
 
 .nav-links a:hover,
-.nav-links a.active, .video.active, .video:hover {
+.nav-links a.active, .video:hover, .references:hover {
   color: var(--secondary-color);
   font-weight: bold;
+}
+
+.video {
+  text-decoration: underline;
+  color: var(--secondary-color);
 }
 
 .signup-button {
